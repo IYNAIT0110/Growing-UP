@@ -122,7 +122,15 @@ DIR="D:\workbuddy\成长感悟\.workbuddy\growing_up"
 | lark-cli | `C:\Users\tianyi.bu\.workbuddy\binaries\node\cli-connector-packages\lark-cli` |
 
 Whisper 模型：`tiny`(~75MB) / `base` / `small`（默认，~500MB）/ `medium`(~1.5GB)。
-短视频用 small 够；长视频 CPU 转写慢，可接受再上 medium。
+
+### 实测耗时（2026-09-23，CPU）
+
+| 场景 | 参数 | 实测 |
+| --- | --- | --- |
+| 84 分钟视频（5067s，95,602 字逐字稿） | `--model tiny` | 全流程（刷 cookie + 下载 237MB + 转写）约 **11.5 分钟** |
+| cookie 刷新 | 目标视频页 | 拿 37 条（只刷首页约 23-30 条，部分视频会失败） |
+
+**长视频（>30 分钟）建议显式降级 `--model tiny`**，否则 small/medium 在 CPU 上可能跑 30-60 分钟。短视频用默认 small 即可。
 
 ## 坑位（从 dy 项目继承，务必遵守）
 
