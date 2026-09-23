@@ -1,0 +1,23 @@
+# 敏感凭据（绝不能上传）
+douyin_cookies.txt
+
+# 去重状态（本机私有，不上传）
+state.json
+
+# 大文件 / 媒体
+downloads/
+videos/
+
+# 转写中间产物
+transcripts/
+
+# 工具脚本
+*.py
+__pycache__/
+
+# 音频
+*.mp3
+
+# 其他
+*.log
+.DS_Store
