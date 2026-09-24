@@ -18,6 +18,9 @@ __pycache__/
 # 音频
 *.mp3
 
+# 词典缓存（构建期用，删了会自动重抓，不上传）
+wordcache/
+
 # 其他
 *.log
 .DS_Store
