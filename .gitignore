@@ -26,3 +26,6 @@ __pycache__/
 run_out.json
 retry_out.json
 probe_out.txt
+
+# 本机记忆/自动化运行记录（私有，不入库）
+.workbuddy/
