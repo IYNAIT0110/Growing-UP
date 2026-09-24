@@ -21,3 +21,8 @@ __pycache__/
 # 其他
 *.log
 .DS_Store
+
+# 单次运行的临时输出（供人工排查，不入库）
+run_out.json
+retry_out.json
+probe_out.txt

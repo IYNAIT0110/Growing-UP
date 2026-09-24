@@ -99,6 +99,22 @@ DIR="D:\workbuddy\成长感悟\.workbuddy\growing_up"
 
 输出 JSON：`{"run_date", "feishu_ok", "new_count", "results":[{"url","video_id","transcript_path","ok","reason"}]}`
 
+排查用：设环境变量 `GU_LANGUAGE=en`（或 `zh`）可跳过语言探测，强制指定转写语言。
+
+### 语言处理：自动探测，不要写死（2026-09-24 起）
+
+转写语言**由脚本用前 30 秒自动探测**，不写死。
+
+- 为什么改：此前 `language="zh"` 写死。2026-09-24 遇到一条英文原声视频（《神探夏洛克》伴郎致辞），small 模型产出 **0 字符空文件**，medium 模型产出 **1321 字符连贯的中文幻觉**——两种都是静默污染。本群既有中文口播也有英文影视片段，写死语言必然翻车。
+- 现在的行为：探测到 `zh` → 用 `language="zh"` + 中文 `initial_prompt`（能把输出稳定在**简体**，并统一成长类领域用词）；探测到其他语言 → 用该语言且**不给**中文 prompt（中文 prompt 会误导非中文音频）。
+- 探测结果写进逐字稿 JSON 的 `probe_language` 字段，便于复查。
+
+### 空转写守卫（2026-09-24 起）
+
+转写字符数低于 `max(20, 时长秒 × 1.0)` 时判定为**失败**，写入 `state.json.status=failed` 与 `reason=empty_transcript(...)`，次日按规则 5 重试。
+
+- 为什么加：此前 `process()` 无条件标 `ok: True`，0 字符也被记为成功 → 永不重试 = 该条视频彻底丢失。实测中文口播逐字稿约 13 字符/秒（含时间戳前缀），1.0 字符/秒是极保守下限。
+
 ## 目录结构
 
 | 路径 | 用途 | 上传？ |
@@ -142,6 +158,8 @@ Whisper 模型：`tiny`(~75MB) / `base` / `small`（默认，~500MB）/ `medium`
 | cookie 新鲜度 | 必须访问**目标视频页**再取 cookie（36-38 条），只刷首页（23-30 条）部分视频会报 `Fresh cookies needed` |
 | 跨 bash / Windows Python 传文件 | **不要用 `/tmp`**，Git Bash 的 `/tmp` 对 Windows 版 Python 不可见 |
 | 下载定位 | 用 yt-dlp `--print after_move:filepath`，不要"取 mtime 最大文件" |
+| 转写语言 | **不要写死**。自动探测（见上"语言处理"），否则英文视频会产出 0 字符或中文幻觉 |
+| 下载残留 | `downloads/` 里有同名残留文件时 yt-dlp 会报 `HTTP Error 416`。手动重跑前先清 `downloads/*.mp4`（中间产物，可安全删） |
 
 ## GitHub 同步
 
