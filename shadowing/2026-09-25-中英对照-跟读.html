@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-09-25-中英对照</title>
+<style>
+:root{
+  --bg:#fbfaf8; --card:#fff; --line:#e6e2dc; --tx:#1f2328; --tx2:#6b7280; --tx3:#9ca3af;
+  --accent:#2f6f4f; --soft:#e8f1ec; --cn:#8a8578; --hl:#fdf3d0; --warn:#b45309;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);
+  font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,248,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:11px 18px}
+h1{font-size:15.5px;margin:0 0 8px;font-weight:650;line-height:1.4}
+h1 small{font-weight:400;color:var(--tx2);font-size:12.5px}
+.bar{display:flex;flex-wrap:wrap;gap:7px;align-items:center;font-size:12.5px}
+button,select{font:inherit;font-size:12.5px;padding:4px 10px;border:1px solid var(--line);
+  background:var(--card);color:var(--tx);border-radius:7px;cursor:pointer}
+button:hover{border-color:var(--accent);color:var(--accent)}
+button.on{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+label{display:flex;align-items:center;gap:5px;color:var(--tx2)}
+input[type=range]{width:88px}
+#status{font-size:12px;color:var(--tx2);margin-top:5px}
+.wrap{display:flex;gap:16px;max-width:1400px;margin:0 auto;padding:16px 18px 60px;align-items:flex-start}
+main{flex:1 1 auto;min-width:0}
+aside{flex:0 0 40%;max-width:520px;position:sticky;top:118px;max-height:calc(100vh - 136px);
+  overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.part-h{margin:20px 0 9px;font-size:13px;font-weight:650;color:var(--accent)}
+.row{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:10px 12px;margin-bottom:7px;cursor:pointer;transition:.15s}
+.row:hover{border-color:var(--accent)}
+.row.playing{background:var(--soft);border-color:var(--accent)}
+.row.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(47,111,79,.13)}
+.en{font-size:15.5px}
+.num{display:inline-block;min-width:30px;color:var(--tx2);font-size:12px;font-variant-numeric:tabular-nums}
+.cn{display:none;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line);color:var(--cn);font-size:13px}
+body.show-cn .cn{display:block}
+.ph{font-size:12.5px;color:var(--tx2);margin:2px 0 10px;line-height:1.65}
+.chips{display:flex;flex-wrap:wrap;gap:4px;line-height:2;margin-bottom:12px}
+.chip{border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:14.5px;cursor:pointer;
+  background:#fdfdfc;transition:.12s}
+.chip:hover{border-color:var(--accent);background:var(--soft)}
+.chip.sel{background:var(--hl);border-color:#d9b648}
+.chip.dict{border-bottom:2px solid #9ccbb0}
+.punct{color:var(--tx3);font-size:14.5px}
+.card{border-top:1px solid var(--line);padding-top:12px;min-height:130px}
+.hd{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.word{font-size:21px;font-weight:650}
+.phn{color:var(--tx2);font-size:13px}
+.badge{font-size:11px;padding:1px 7px;border-radius:20px;background:var(--soft);
+  color:var(--accent);border:1px solid #cfe3d7}
+.badge.lv{background:#fdf0e3;color:var(--warn);border-color:#f0dcbc}
+.defs{margin:6px 0 0;padding-left:18px;font-size:14px}
+.defs li{margin-bottom:3px}
+.forms{font-size:12px;color:var(--tx2);margin-top:8px}
+.sub{margin-top:12px;font-size:12px;font-weight:650;color:var(--accent)}
+.ex{border-left:2px solid #cfe3d7;padding:4px 0 4px 10px;margin:6px 0;font-size:13.5px;cursor:pointer}
+.ex:hover{border-left-color:var(--accent)}
+.ex .cnx{color:var(--cn);font-size:12.5px}
+.empty{color:var(--tx3);font-size:13.5px;padding:18px 0}
+.hint{font-size:12.5px;color:var(--tx2);background:#f2f4f3;border-radius:8px;
+  padding:9px 12px;margin-bottom:12px;line-height:1.7}
+.vocab{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.vocab ul{padding-left:16px;margin:6px 0 0;font-size:13px}
+.vocab li{margin-bottom:2px}
+.vw{cursor:pointer;font-weight:600}
+.vw:hover{color:var(--accent)}
+.del{color:#c0c4c9;cursor:pointer;margin-left:6px}
+footer{max-width:1400px;margin:0 auto;padding:0 18px 30px;font-size:12px;color:var(--tx2)}
+@media (max-width:1000px){
+  .wrap{flex-direction:column}
+  aside{flex:1 1 auto;width:100%;max-width:none;position:static;max-height:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>2026-09-25-中英对照 <small>· 跟读 ＋ 点词查询</small></h1>
+  <div class="bar">
+    <button id="playAll">&#9654; 播放全部</button>
+    <button id="stop">&#9632; 停止</button>
+    <button id="toggleCn">显示中文</button>
+    <select id="engine" title="语音引擎">
+      <option value="local">本地语音（离线）</option>
+      <option value="youdao">在线·有道</option>
+      <option value="google">在线·Google</option>
+    </select>
+    <select id="voice"><option value="">默认语音</option></select>
+    <label>语速 <input type="range" id="rate" min="0.5" max="1.2" step="0.05" value="0.85">
+      <span id="rateVal">0.85x</span></label>
+    <label>停顿 <input type="range" id="gap" min="0" max="2500" step="100" value="1200">
+      <span id="gapVal">1.2s</span></label>
+  </div>
+  <div id="status"></div>
+</header>
+<div class="wrap">
+  <main>
+    <div class="hint">点一句 → 开始朗读，右侧同时把这句话拆成单词。<b>再点任意单词</b>看音标、释义、词形变化和真实例句。底部绿线的词表示词库已收录。</div>
+    <div id="list"></div>
+  </main>
+  <aside>
+    <div id="sent" class="ph">点左侧任意一句开始</div>
+    <div id="chips" class="chips"></div>
+    <div id="card" class="card"><div class="empty">选一个单词查看释义与用法</div></div>
+    <div class="vocab"><span id="vocabH">⭐ 生词本（0）</span><ul id="vocab"></ul></div>
+  </aside>
+</div>
+<footer>共 18 句 · 61 词条 · 数据与词库全部内嵌，离线可用</footer>
+<script>
+const DATA = [{"part": "A", "en": "What's the best way to walk away from a relationship?", "cn": "放弃一段感情最好的方式是什么？", "tok": [["What's", "what'"], [" ", ""], ["the", "the"], [" ", ""], ["best", "good"], [" ", ""], ["way", "way"], [" ", ""], ["to", "to"], [" ", ""], ["walk", "walk"], [" ", ""], ["away", ""], [" ", ""], ["from", "from"], [" ", ""], ["a", "a"], [" ", ""], ["relationship", "relationship"], ["?", ""]]}, {"part": "A", "en": "Honestly? As long as you put your hand on your heart and can say, \"I did my best\" — that's enough.", "cn": "老实讲啊，只要你摸着自己的良心，说一句\"我尽力了\"，就足够了。", "tok": [["Honestly", "honest"], ["?", ""], [" ", ""], ["As", "as"], [" ", ""], ["long", "long"], [" ", ""], ["as", "as"], [" ", ""], ["you", ""], [" ", ""], ["put", "put"], [" ", ""], ["your", ""], [" ", ""], ["hand", "hand"], [" ", ""], ["on", "on"], [" ", ""], ["your", ""], [" ", ""], ["heart", "heart"], [" ", ""], ["and", "and"], [" ", ""], ["can", ""], [" ", ""], ["say", "say"], [",", ""], [" ", ""], ["\"", ""], ["I", ""], [" ", ""], ["did", ""], [" ", ""], ["my", ""], [" ", ""], ["best", "good"], ["\"", ""], [" ", ""], ["—", ""], [" ", ""], ["that's", "that'"], [" ", ""], ["enough", "enough"], [".", ""]]}, {"part": "A", "en": "Sometimes I think that if this person treats me badly, it's because I gave him the right to.", "cn": "我有时候会觉得，如果这个人对我不好，是因为我赋予了他这个权利。", "tok": [["Sometimes", "sometime"], [" ", ""], ["I", ""], [" ", ""], ["think", "think"], [" ", ""], ["that", "that"], [" ", ""], ["if", "if"], [" ", ""], ["this", "this"], [" ", ""], ["person", "person"], [" ", ""], ["treats", "treat"], [" ", ""], ["me", ""], [" ", ""], ["badly", "bad"], [",", ""], [" ", ""], ["it's", "it's"], [" ", ""], ["because", "because"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["him", ""], [" ", ""], ["the", "the"], [" ", ""], ["right", "right"], [" ", ""], ["to", "to"], [".", ""]]}, {"part": "A", "en": "What I need to do is take that right back.", "cn": "我要做的是收回这个权利。", "tok": [["What", "what"], [" ", ""], ["I", ""], [" ", ""], ["need", "need"], [" ", ""], ["to", "to"], [" ", ""], ["do", ""], [" ", ""], ["is", ""], [" ", ""], ["take", "take"], [" ", ""], ["that", "that"], [" ", ""], ["right", "right"], [" ", ""], ["back", ""], [".", ""]]}, {"part": "A", "en": "Don't you think bad habits are just a product of being spoiled?", "cn": "你不觉得毛病都是惯出来的吗？", "tok": [["Don't", "don't"], [" ", ""], ["you", ""], [" ", ""], ["think", "think"], [" ", ""], ["bad", "bad"], [" ", ""], ["habits", "habit"], [" ", ""], ["are", ""], [" ", ""], ["just", "just"], [" ", ""], ["a", "a"], [" ", ""], ["product", "product"], [" ", ""], ["of", "of"], [" ", ""], ["being", ""], [" ", ""], ["spoiled", "spoil"], ["?", ""]]}, {"part": "A", "en": "Because sometimes — honestly, I love you, so I gave you this key, this right.", "cn": "因为有时候，其实——我爱你，我就给了你这个钥匙、这个权利。", "tok": [["Because", "because"], [" ", ""], ["sometimes", "sometime"], [" ", ""], ["—", ""], [" ", ""], ["honestly", "honest"], [",", ""], [" ", ""], ["I", ""], [" ", ""], ["love", "love"], [" ", ""], ["you", ""], [",", ""], [" ", ""], ["so", "so"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["you", ""], [" ", ""], ["this", "this"], [" ", ""], ["key", "key"], [",", ""], [" ", ""], ["this", "this"], [" ", ""], ["right", "right"], [".", ""]]}, {"part": "A", "en": "Right. That's something I picked up from a novel I read way back.", "cn": "对，这我当初看《群老小说》看来的。", "tok": [["Right", "right"], [".", ""], [" ", ""], ["That's", "that'"], [" ", ""], ["something", "something"], [" ", ""], ["I", ""], [" ", ""], ["picked", "pick"], [" ", ""], ["up", "up"], [" ", ""], ["from", "from"], [" ", ""], ["a", "a"], [" ", ""], ["novel", "novel"], [" ", ""], ["I", ""], [" ", ""], ["read", "read"], [" ", ""], ["way", "way"], [" ", ""], ["back", ""], [".", ""]]}, {"part": "A", "en": "What he meant is that I keep no defences up against you.", "cn": "他的意思是，我对你是不设防的。", "tok": [["What", "what"], [" ", ""], ["he", ""], [" ", ""], ["meant", "mean"], [" ", ""], ["is", ""], [" ", ""], ["that", "that"], [" ", ""], ["I", ""], [" ", ""], ["keep", "keep"], [" ", ""], ["no", "no"], [" ", ""], ["defences", "defence"], [" ", ""], ["up", "up"], [" ", ""], ["against", "against"], [" ", ""], ["you", ""], [".", ""]]}, {"part": "A", "en": "I love you, so I gave it to you — including the right to hurt me.", "cn": "我爱你，我就给了你，包括伤害我的权利。", "tok": [["I", ""], [" ", ""], ["love", "love"], [" ", ""], ["you", ""], [",", ""], [" ", ""], ["so", "so"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["it", ""], [" ", ""], ["to", "to"], [" ", ""], ["you", ""], [" ", ""], ["—", ""], [" ", ""], ["including", "includ"], [" ", ""], ["the", "the"], [" ", ""], ["right", "right"], [" ", ""], ["to", "to"], [" ", ""], ["hurt", "hurt"], [" ", ""], ["me", ""], [".", ""]]}, {"part": "A", "en": "And there's something to that, actually.", "cn": "就这话其实是有一些道理的。", "tok": [["And", "and"], [" ", ""], ["there's", "there'"], [" ", ""], ["something", "something"], [" ", ""], ["to", "to"], [" ", ""], ["that", "that"], [",", ""], [" ", ""], ["actually", "actual"], [".", ""]]}, {"part": "A", "en": "Which means: take that right back.", "cn": "那就是要收回这个权利。", "tok": [["Which", "which"], [" ", ""], ["means", "mean"], [":", ""], [" ", ""], ["take", "take"], [" ", ""], ["that", "that"], [" ", ""], ["right", "right"], [" ", ""], ["back", ""], [".", ""]]}, {"part": "A", "en": "Take it back — decisively. That's the hard part.", "cn": "果断地收回，很难。", "tok": [["Take", "take"], [" ", ""], ["it", ""], [" ", ""], ["back", ""], [" ", ""], ["—", ""], [" ", ""], ["decisively", "decisive"], [".", ""], [" ", ""], ["That's", "that'"], [" ", ""], ["the", "the"], [" ", ""], ["hard", "hard"], [" ", ""], ["part", "part"], [".", ""]]}, {"part": "B", "en": "What's the best way to walk away from a relationship? Honestly? As long as you put your hand on your heart and can say, \"I did my best\" — that's enough.", "cn": "放弃一段感情最好的方式是什么？老实讲啊，只要你摸着自己的良心，说一句\"我尽力了\"，就足够了。", "tok": [["What's", "what'"], [" ", ""], ["the", "the"], [" ", ""], ["best", "good"], [" ", ""], ["way", "way"], [" ", ""], ["to", "to"], [" ", ""], ["walk", "walk"], [" ", ""], ["away", ""], [" ", ""], ["from", "from"], [" ", ""], ["a", "a"], [" ", ""], ["relationship", "relationship"], ["?", ""], [" ", ""], ["Honestly", "honest"], ["?", ""], [" ", ""], ["As", "as"], [" ", ""], ["long", "long"], [" ", ""], ["as", "as"], [" ", ""], ["you", ""], [" ", ""], ["put", "put"], [" ", ""], ["your", ""], [" ", ""], ["hand", "hand"], [" ", ""], ["on", "on"], [" ", ""], ["your", ""], [" ", ""], ["heart", "heart"], [" ", ""], ["and", "and"], [" ", ""], ["can", ""], [" ", ""], ["say", "say"], [",", ""], [" ", ""], ["\"", ""], ["I", ""], [" ", ""], ["did", ""], [" ", ""], ["my", ""], [" ", ""], ["best", "good"], ["\"", ""], [" ", ""], ["—", ""], [" ", ""], ["that's", "that'"], [" ", ""], ["enough", "enough"], [".", ""]]}, {"part": "B", "en": "Sometimes I think that if this person treats me badly, it's because I gave him the right to. What I need to do is take that right back. Don't you think bad habits are just a product of being spoiled? Because sometimes — honestly, I love you, so I gave you this key, this right. Right. That's something I picked up from a novel I read way back.", "cn": "我有时候会觉得，如果这个人对我不好，是因为我赋予了他这个权利。我要做的是收回这个权利。你不觉得毛病都是惯出来的吗？因为有时候，其实——我爱你，我就给了你这个钥匙、这个权利。对，这我当初看《群老小说》看来的。", "tok": [["Sometimes", "sometime"], [" ", ""], ["I", ""], [" ", ""], ["think", "think"], [" ", ""], ["that", "that"], [" ", ""], ["if", "if"], [" ", ""], ["this", "this"], [" ", ""], ["person", "person"], [" ", ""], ["treats", "treat"], [" ", ""], ["me", ""], [" ", ""], ["badly", "bad"], [",", ""], [" ", ""], ["it's", "it's"], [" ", ""], ["because", "because"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["him", ""], [" ", ""], ["the", "the"], [" ", ""], ["right", "right"], [" ", ""], ["to", "to"], [".", ""], [" ", ""], ["What", "what"], [" ", ""], ["I", ""], [" ", ""], ["need", "need"], [" ", ""], ["to", "to"], [" ", ""], ["do", ""], [" ", ""], ["is", ""], [" ", ""], ["take", "take"], [" ", ""], ["that", "that"], [" ", ""], ["right", "right"], [" ", ""], ["back", ""], [".", ""], [" ", ""], ["Don't", "don't"], [" ", ""], ["you", ""], [" ", ""], ["think", "think"], [" ", ""], ["bad", "bad"], [" ", ""], ["habits", "habit"], [" ", ""], ["are", ""], [" ", ""], ["just", "just"], [" ", ""], ["a", "a"], [" ", ""], ["product", "product"], [" ", ""], ["of", "of"], [" ", ""], ["being", ""], [" ", ""], ["spoiled", "spoil"], ["?", ""], [" ", ""], ["Because", "because"], [" ", ""], ["sometimes", "sometime"], [" ", ""], ["—", ""], [" ", ""], ["honestly", "honest"], [",", ""], [" ", ""], ["I", ""], [" ", ""], ["love", "love"], [" ", ""], ["you", ""], [",", ""], [" ", ""], ["so", "so"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["you", ""], [" ", ""], ["this", "this"], [" ", ""], ["key", "key"], [",", ""], [" ", ""], ["this", "this"], [" ", ""], ["right", "right"], [".", ""], [" ", ""], ["Right", "right"], [".", ""], [" ", ""], ["That's", "that'"], [" ", ""], ["something", "something"], [" ", ""], ["I", ""], [" ", ""], ["picked", "pick"], [" ", ""], ["up", "up"], [" ", ""], ["from", "from"], [" ", ""], ["a", "a"], [" ", ""], ["novel", "novel"], [" ", ""], ["I", ""], [" ", ""], ["read", "read"], [" ", ""], ["way", "way"], [" ", ""], ["back", ""], [".", ""]]}, {"part": "B", "en": "What he meant is that I keep no defences up against you. I love you, so I gave it to you — including the right to hurt me. And there's something to that, actually. Which means: take that right back. Take it back — decisively. That's the hard part.", "cn": "他的意思是，我对你是不设防的。我爱你，我就给了你，包括伤害我的权利。就这话其实是有一些道理的。那就是要收回这个权利。果断地收回，很难。", "tok": [["What", "what"], [" ", ""], ["he", ""], [" ", ""], ["meant", "mean"], [" ", ""], ["is", ""], [" ", ""], ["that", "that"], [" ", ""], ["I", ""], [" ", ""], ["keep", "keep"], [" ", ""], ["no", "no"], [" ", ""], ["defences", "defence"], [" ", ""], ["up", "up"], [" ", ""], ["against", "against"], [" ", ""], ["you", ""], [".", ""], [" ", ""], ["I", ""], [" ", ""], ["love", "love"], [" ", ""], ["you", ""], [",", ""], [" ", ""], ["so", "so"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["it", ""], [" ", ""], ["to", "to"], [" ", ""], ["you", ""], [" ", ""], ["—", ""], [" ", ""], ["including", "includ"], [" ", ""], ["the", "the"], [" ", ""], ["right", "right"], [" ", ""], ["to", "to"], [" ", ""], ["hurt", "hurt"], [" ", ""], ["me", ""], [".", ""], [" ", ""], ["And", "and"], [" ", ""], ["there's", "there'"], [" ", ""], ["something", "something"], [" ", ""], ["to", "to"], [" ", ""], ["that", "that"], [",", ""], [" ", ""], ["actually", "actual"], [".", ""], [" ", ""], ["Which", "which"], [" ", ""], ["means", "mean"], [":", ""], [" ", ""], ["take", "take"], [" ", ""], ["that", "that"], [" ", ""], ["right", "right"], [" ", ""], ["back", ""], [".", ""], [" ", ""], ["Take", "take"], [" ", ""], ["it", ""], [" ", ""], ["back", ""], [" ", ""], ["—", ""], [" ", ""], ["decisively", "decisive"], [".", ""], [" ", ""], ["That's", "that'"], [" ", ""], ["the", "the"], [" ", ""], ["hard", "hard"], [" ", ""], ["part", "part"], [".", ""]]}, {"part": "C", "en": "Sometimes I think that if this person treats me badly, it's because I gave him the right to. What I need to do is take that right back. Don't you think bad habits are just a product of being spoiled?", "cn": "我有时候会觉得，如果这个人对我不好，是因为我赋予了他这个权利。我要做的是收回这个权利。你不觉得毛病都是惯出来的吗？", "tok": [["Sometimes", "sometime"], [" ", ""], ["I", ""], [" ", ""], ["think", "think"], [" ", ""], ["that", "that"], [" ", ""], ["if", "if"], [" ", ""], ["this", "this"], [" ", ""], ["person", "person"], [" ", ""], ["treats", "treat"], [" ", ""], ["me", ""], [" ", ""], ["badly", "bad"], [",", ""], [" ", ""], ["it's", "it's"], [" ", ""], ["because", "because"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["him", ""], [" ", ""], ["the", "the"], [" ", ""], ["right", "right"], [" ", ""], ["to", "to"], [".", ""], [" ", ""], ["What", "what"], [" ", ""], ["I", ""], [" ", ""], ["need", "need"], [" ", ""], ["to", "to"], [" ", ""], ["do", ""], [" ", ""], ["is", ""], [" ", ""], ["take", "take"], [" ", ""], ["that", "that"], [" ", ""], ["right", "right"], [" ", ""], ["back", ""], [".", ""], [" ", ""], ["Don't", "don't"], [" ", ""], ["you", ""], [" ", ""], ["think", "think"], [" ", ""], ["bad", "bad"], [" ", ""], ["habits", "habit"], [" ", ""], ["are", ""], [" ", ""], ["just", "just"], [" ", ""], ["a", "a"], [" ", ""], ["product", "product"], [" ", ""], ["of", "of"], [" ", ""], ["being", ""], [" ", ""], ["spoiled", "spoil"], ["?", ""]]}, {"part": "C", "en": "Because sometimes — honestly, I love you, so I gave you this key, this right. Right. That's something I picked up from a novel I read way back. What he meant is that I keep no defences up against you. I love you, so I gave it to you — including the right to hurt me.", "cn": "因为有时候，其实——我爱你，我就给了你这个钥匙、这个权利。对，这我当初看《群老小说》看来的。他的意思是，我对你是不设防的。我爱你，我就给了你，包括伤害我的权利。", "tok": [["Because", "because"], [" ", ""], ["sometimes", "sometime"], [" ", ""], ["—", ""], [" ", ""], ["honestly", "honest"], [",", ""], [" ", ""], ["I", ""], [" ", ""], ["love", "love"], [" ", ""], ["you", ""], [",", ""], [" ", ""], ["so", "so"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["you", ""], [" ", ""], ["this", "this"], [" ", ""], ["key", "key"], [",", ""], [" ", ""], ["this", "this"], [" ", ""], ["right", "right"], [".", ""], [" ", ""], ["Right", "right"], [".", ""], [" ", ""], ["That's", "that'"], [" ", ""], ["something", "something"], [" ", ""], ["I", ""], [" ", ""], ["picked", "pick"], [" ", ""], ["up", "up"], [" ", ""], ["from", "from"], [" ", ""], ["a", "a"], [" ", ""], ["novel", "novel"], [" ", ""], ["I", ""], [" ", ""], ["read", "read"], [" ", ""], ["way", "way"], [" ", ""], ["back", ""], [".", ""], [" ", ""], ["What", "what"], [" ", ""], ["he", ""], [" ", ""], ["meant", "mean"], [" ", ""], ["is", ""], [" ", ""], ["that", "that"], [" ", ""], ["I", ""], [" ", ""], ["keep", "keep"], [" ", ""], ["no", "no"], [" ", ""], ["defences", "defence"], [" ", ""], ["up", "up"], [" ", ""], ["against", "against"], [" ", ""], ["you", ""], [".", ""], [" ", ""], ["I", ""], [" ", ""], ["love", "love"], [" ", ""], ["you", ""], [",", ""], [" ", ""], ["so", "so"], [" ", ""], ["I", ""], [" ", ""], ["gave", "give"], [" ", ""], ["it", ""], [" ", ""], ["to", "to"], [" ", ""], ["you", ""], [" ", ""], ["—", ""], [" ", ""], ["including", "includ"], [" ", ""], ["the", "the"], [" ", ""], ["right", "right"], [" ", ""], ["to", "to"], [" ", ""], ["hurt", "hurt"], [" ", ""], ["me", ""], [".", ""]]}, {"part": "C", "en": "And there's something to that, actually. Which means: take that right back. Take it back — decisively. That's the hard part.", "cn": "就这话其实是有一些道理的。那就是要收回这个权利。果断地收回，很难。", "tok": [["And", "and"], [" ", ""], ["there's", "there'"], [" ", ""], ["something", "something"], [" ", ""], ["to", "to"], [" ", ""], ["that", "that"], [",", ""], [" ", ""], ["actually", "actual"], [".", ""], [" ", ""], ["Which", "which"], [" ", ""], ["means", "mean"], [":", ""], [" ", ""], ["take", "take"], [" ", ""], ["that", "that"], [" ", ""], ["right", "right"], [" ", ""], ["back", ""], [".", ""], [" ", ""], ["Take", "take"], [" ", ""], ["it", ""], [" ", ""], ["back", ""], [" ", ""], ["—", ""], [" ", ""], ["decisively", "decisive"], [".", ""], [" ", ""], ["That's", "that'"], [" ", ""], ["the", "the"], [" ", ""], ["hard", "hard"], [" ", ""], ["part", "part"], [".", ""]]}];
+const BANK = {"what'": {"w": "what'", "ph": "", "defs": [], "forms": [], "ex": [["People matter because of what they are, not what they have.", "人重要的不在于他们拥有什么，而在于他们是什么样的人。"], ["We should investigate what happened, what went wrong.", "我们应该调查发生了什么事情，什么地方出了问题。"]], "lv": null}, "good": {"w": "good", "ph": "ɡʊd", "defs": ["adj. 优良的；能干的，擅长的；令人愉快的，满意的；合适的，方便的；有益的；乖的；虔诚的；健康的；善良的；正直的；相当大的，相当多的；至少；彻底的；明智的，合理的；划算的，收益可观的；赢得赞许的，令人尊敬的；（用于表示回应）好的；表示惊讶、生气或者加强语气；（用于打招呼）好；有趣的；有效的；能提供……的；（踢、射、投）命中；亲密的；够了", "n. 善，正义；好事；商品，所有物；（运载的）货物（goods）；优势，利益；真货，正品（the goods）；好人，有道德的人（the good）", "adv. 好地；彻底地，完全地", "【名】 （Good）（英）古德，（瑞典）戈德（人名）"], "forms": ["复数 goods", "比较级 better", "最高级 best"], "ex": [["She speaks good English.", "她英语说得很好。"], ["It was really good.", "这非常好。"]], "lv": "中考"}, "way": {"w": "way", "ph": "weɪ", "defs": ["n. 方法，手段；习俗，习惯，行为方式；（行事）作风，（某事发生的）方式；道路，路线；行进路线，通路；方向；……路（用于道路的名称）；出入通道，门口；距离，时段；方面；（两种之一的）选择；情况，状态；（某人居住的）地区，地方；（分成的）部分；职业，行当；（船）航行，动力；船台，滑道（ways）", "adv. 大大地，远远地；非常，很", "adj. 途中的", "【名】 （Way）韦（人名）"], "forms": ["复数 ways"], "ex": [["The doctor's on his way.", "医生正在路上。"], ["We wound our way southeast.", "我们向东南方向蜿蜒前行。"]], "lv": "中考"}, "walk": {"w": "walk", "ph": "wɔːk", "defs": ["v. 走，步行；徒步旅行，散步；陪（某人）走，护送（某人）；带（宠物）散步，遛；把（某物）移走，使（某物）移动；消失，被偷；轻易做成（某事）；放弃，突然退出；出现，显灵；（使）上一垒；被无罪释放，未获刑罚；（击球手不等裁判指示）离开球场；生活", "n. 步行，散步；徒步旅行；散步的小路，步行的路径；步态；步行的距离（或时间）；步行速度；（棒球）自由上垒；（护林人的）管辖林区；斗鸡场；小猎犬驯养场；（邮递员的）投递路线；一群沙锥", "【名】 （Walk）（美）沃克（人名）"], "forms": ["复数 walks", "第三人称单数 walks", "现在分词 walking", "过去式 walked", "过去分词 walked"], "ex": [["They walk their dogs every day.", "他们每天遛狗。"], ["She slowed to a steady walk.", "她慢下来，稳步行走。"]], "lv": "中考"}, "relationship": {"w": "relationship", "ph": "rɪˈleɪʃ(ə)nʃɪp", "defs": ["n. （人、团体、国家等相互间的）关系；（人或事物之间的）关联，关系；恋人关系，性爱关系；血缘关系，姻亲关系"], "forms": ["复数 relationships"], "ex": [["Their relationship flowered.", "他们的关系变得更好了。"], ["Their relationship soon went sour.", "他们的关系很快有了嫌隙。"]], "lv": "中考"}, "honest": {"w": "honest", "ph": "ˈɑːnɪst", "defs": ["adj. 诚实的，正直的；坦诚的，直率的；真诚的，显示诚意的；正当获得的；纯正的，不花哨的；无意（伤害别人）的", "adv. 真的，确实"], "forms": [], "ex": [["I'm disappointed, to be honest.", "我很失望，说实在的。"], ["He was refreshingly honest.", "他诚实得让人耳目一新。"]], "lv": "中考"}, "long": {"w": "long", "ph": "lɔːŋ", "defs": ["adj. 长的；长久的，长期的；漫长的；长篇的；长音的；出界的；（面部表情）不高兴的，愁苦的；记得牢的，记得久的；（可能性，机会）小的，渺茫的；远期（获利）的；（酒与凉饮料）混合的，大量的；（运动中的球）长传的，远距离的", "adv. 长久地，长期地；很久（以前或以后）；整个（时间段）；（球扔得）远；整个 (时间段)", "v. 渴望", "n. 长时间，长时期；长音；远期证券；长期资本", "【名】 （Long）（美、英、爱）隆（人名）"], "forms": ["复数 longs", "第三人称单数 longs", "现在分词 longing", "过去式 longed", "过去分词 longed", "比较级 longer", "最高级 longest"], "ex": [["The bureaucrats dallied too long.", "官僚们延误了太长时间。"], ["The long blades clashed together.", "长刀相击铿然作响。"]], "lv": "中考"}, "put": {"w": "put", "ph": "pʊt", "defs": ["v. 放，放置；猛推，用力插入；将……送往，安置；使与……连接，安装；写下；使处于（某状态或情况）；使受到……的影响，把……施加给；给予（重视、信任、价值等）；把……视为（或列为）；表述，提出；使工作，使用；投掷（铁饼），推（铅球）；（船）（沿某个方向）行驶；谱曲", "n. （铅球或铁饼的）投掷，推；（股票）put option 的简称", "adj. 固定不动的", "【名】 （Put）（泰、缅）布（人名）"], "forms": ["复数 puts", "第三人称单数 puts", "现在分词 putting", "过去式 put", "过去分词 put"], "ex": [["Danny put down his glass.", "丹尼放下他的玻璃杯。"], ["She's put her hair up.", "她把头发挽在头上。"]], "lv": "中考"}, "hand": {"w": "hand", "ph": "hænd", "defs": ["n. 手；（钟表的）指针；一局牌，一手牌；帮助，援手；工人；船员，水手；支配，掌管；作用，影响；鼓掌，拍手喝彩；字迹；一手之宽（用来测量马匹的高度）；（女方的）允婚；表演艺人，制作工匠", "comb. 用……手的；手工", "v. 交，递；支持，搀扶；卷（帆）", "【名】 （Hand）（英、瑞典）汉德（人名）"], "forms": ["复数 hands", "第三人称单数 hands", "现在分词 handing", "过去式 handed", "过去分词 handed"], "ex": [["He patted her hand patronizingly.", "他以上级姿态拍了拍她的手。"], ["His hand met hers.", "他的手碰到她的手。"]], "lv": "中考"}, "heart": {"w": "heart", "ph": "hɑːrt", "defs": ["n. 心，心脏；内心，感情；胸前；重点，核心；中心，中央；信心，勇气；（表示爱的）心形物；红桃牌，红心牌；菜心；同情，怜悯；爱情，情爱；（土地的）肥力", "v. 喜爱，深爱", "【名】 （Heart）（英）哈特（人名）"], "forms": ["复数 hearts", "第三人称单数 hearts", "现在分词 hearting", "过去式 hearted", "过去分词 hearted"], "ex": [["Her heart raced uncontrollably.", "她的心脏难以控制地急速跳动起来。"], ["My heart was knocking wildly.", "我的心怦怦直跳。"]], "lv": "中考"}, "say": {"w": "say", "ph": "seɪ", "defs": ["vt. 说，讲；宣称，说明；认为，据说；发音，读；确信，确定（事实）；（对某人）意味着；表达，传达；指明，表明；假设，比如说；让某人做（某事）；复述，诵念；念，背诵；替（某人或某事）说好话（坏话）", "n. 发言权，决定权", "int.  （吃惊或吸引注意力）哎呀，喂", "【名】 （Say）（土）萨伊，（法、老、柬）赛，（英）塞伊，（匈、罗）绍伊（人名）"], "forms": ["第三人称单数 says", "现在分词 saying", "过去式 said", "过去分词 said"], "ex": [["He didn't even say sorry.", "他连句道歉的话也没有说。"], ["Nobody knew what to say.", "谁也不知道该说什么。"]], "lv": "中考"}, "that'": {"w": "that'", "ph": "", "defs": [], "forms": [], "ex": [["Phew! That was close—that car nearly hit us.", "啊！好险！那辆车差点儿撞上我们。"], ["I reckon (that) I'm going to get that job.", "我认为我会得到那份工作。"]], "lv": null}, "enough": {"w": "enough", "ph": "ɪˈnʌf", "defs": ["adj. 充足的，足够的", "pron. 足够，充分", "adv. 充分地，足够地；相当，很；说来奇怪，说起来有趣（strangely/interestingly enough）", "n. 足够的（数目或数量），充分", "int. 够了，别再说了"], "forms": [], "ex": [["You're not good enough yet!", "你小子还不够格！"], ["Six bottles should be enough.", "六瓶应该够了。"]], "lv": "中考"}, "sometime": {"w": "sometime", "ph": "ˈsʌmtaɪm", "defs": ["adv. 在（将来或过去的）某个时候", "adj. 曾经的，以前的；偶尔的"], "forms": [], "ex": [["Why don't you come and see me sometime.", "你何不在某个时间来看看我？"], ["Steel cans were introduced sometime during the forties.", "钢罐是在四十年代的某个时候开始使用的。"]], "lv": "四级"}, "think": {"w": "think", "ph": "θɪŋk", "defs": ["v. 认为，以为；明白（用于问句表气愤、吃惊）；觉得；考虑，思考；想出，想象；料想，预料；想要，打算；想起，记得；琢磨，寻思；对……评价（很高）；为……着想；想来，想想看；所指的是；具有某种思维方式；只想，对……着迷；边想边说出声来，自言自语", "n. 想，思索，思考", "adj. 思想的"], "forms": ["第三人称单数 thinks", "现在分词 thinking", "过去式 thought", "过去分词 thought"], "ex": [["I think their methods stink.", "我觉得他们的方法令人讨厌。"], ["I think we've met before.", "我觉得我们以前见过面。"]], "lv": "中考"}, "person": {"w": "person", "ph": "ˈpɜːrs(ə)n", "defs": ["n. 人；自然人，法人；（用于不知其人是谁时）某人，家伙；（语法）人称；（用于复合词）从事……工作（或担任……职务）的人；人品，为人；身体，人身；喜爱（某事物）的人；（戏剧或故事中的）人物，角色；（基督教神学）（圣父、圣子、圣灵三位一体的）位；容貌，外表", "【名】 （Person）（法、俄、德、瑞典）佩尔松，（英）珀森（人名）"], "forms": [], "ex": [["He's quite a serious person.", "他是一个相当严肃的人。"], ["He's a fascinating person.", "他是个魅力十足的人。"]], "lv": "中考"}, "treat": {"w": "treat", "ph": "triːt", "defs": ["v. 对待，看待；治疗，医治；请客，招待；（利用化学物质或反应）处理，保护；把……看作，把……视为；处理，探讨，论述；做使自己快乐的事；把（某物）给某人以示好感；提供（娱乐）；（尤指与对手）商谈，谈判", "n. （不同一般的）乐事，享受；款待，招待；请客，做东；零食；甜食；（尤指不经常吃的）美味佳肴", "【名】 （Treat）特里特（人名）"], "forms": ["复数 treats", "第三人称单数 treats", "现在分词 treating", "过去式 treated", "过去分词 treated"], "ex": [["None of us knew how to treat her.", "我们中没有任何人知道该如何对待她。"], ["We treat boys exactly the same as girls.", "男孩、女孩我们完全同等对待。"]], "lv": "中考"}, "bad": {"w": "bad", "ph": "bæd", "defs": ["adj. 坏的，不好的，令人不悦的；难以接受的，令人遗憾的；粗鲁的，下流的；抱歉的，难过的；质量差的，不合格的；邪恶的，不道德的；顽皮的，不乖的；有病的，疼痛的；腐烂的，变质的；严重的，剧烈的；不明智的，不合适的；不利的，不幸的；拙于，不擅；无价值的，伪造的； 非常好的（比较级badder，最高级baddest）", "n. 坏人，坏事", "adv. 很，非常；厉害地", "【名】 （Bad）（罗）巴德（人名）"], "forms": ["比较级 worse", "最高级 worst"], "ex": [["Divorce is bad for children.", "离婚对孩子不好。"], ["She cursed her bad luck.", "她骂自己运气不好。"]], "lv": "中考"}, "it's": {"w": "it's", "ph": "ɪts", "defs": ["abbr. 它是（it is 的缩约形式）；它已，它有（it has 的缩约形式，尤作助动词）"], "forms": [], "ex": [["It's just as dramatic as a film, only it's real.", "这真和电影一样富有戏剧性，只不过它是现实。"], ["It's not rubbish—it's true!", "这不是瞎说—是真的！"]], "lv": null}, "give": {"w": "give", "ph": "ɡɪv", "defs": ["v. 给，交给；赠送，赠与，送给；提供，供给；捐赠；支付，付款；将（时间、精力等）用于；举办，举行；表演，公开进行；允许；使产生（某种感觉）；使拥有（某一特性）；生产，引起；给（某人）打（电话）；告诉，说出，说明；给……评定（等级）；（把药等）注入，服入；看待，承认；做（动作）；传染；使受惩罚，让（某人）做；作出（决定或判决）；预计将持续（时间）；伸长，弯曲，断裂；让步，妥协；表示一种可能的情况或状态", "n. 伸展性，弹性；适应（或顺应）能力，灵活性", "【名】 （Give）（意）吉韦（人名）"], "forms": ["第三人称单数 gives", "现在分词 giving", "过去式 gave", "过去分词 given"], "ex": [["I'll give you a ring.", "我会给你打电话的。"], ["I'll give you a demo.", "我来给你作个示范。"]], "lv": "中考"}, "right": {"w": "right", "ph": "raɪt", "defs": ["adj. 符合道德的，正当的；正确的，真实的；（人、物）合适的，般配的；（意见，判断）对的；右边的，右侧的；（状态或情况）健康的，正常的； 十足的，真正的（用于强调某人或某物多么糟糕）；正面的，外面的；时尚的，上流社会的；（人或政党）支持保守观点的，右翼的", "v. 纠正，矫正；补救，扭转；把（尤指小船）扶正，使直立", "n. 正当，公正；正当的要求，权利；版权，发行权（rights）；右边，右方（the right）；右拐，右转弯；右边的路（或入口）；（足球等运动）右外场；部队的右翼；右翼组织，右派政党（the right/the Right）；右翼人士的立场，右翼立场（the right）；右手拳", "adv. （地方、位置或时间）正好，就在；直接地，径直地；一直地，完全地；立即，毫不耽搁；正确地，确切地；顺利，正常；在右面，向右边；（政治上）右倾地；用右手地；彻底地，十足地", "int. 好的，对（用于表示明白或同意某人的话）；好（用于引起注意）；对吗（用于确认自己说的话是否正确）；（表示不相信或不同意）是吗，好哇；对不对，懂吗（用于确认对方是否在听并明白你说的话）", "【名】 （Right）（英）赖特（人名）"], "forms": ["复数 rights", "第三人称单数 rights", "现在分词 righting", "过去式 righted", "过去分词 righted"], "ex": [["That's absolutely right.", "那是完全正确的。"], ["You're absolutely right.", "你完全正确。"]], "lv": "中考"}, "need": {"w": "need", "ph": "niːd", "defs": ["v. 需要；（表示应该或不得不做）有必要；需要", "n. 需要，必须； 特别需要，迫切要求；需要的事物，欲望；（食物、钱或生活来源的）短缺，缺乏", "aux. 必要（用于劝告或建议）"], "forms": ["复数 needs", "第三人称单数 needs", "现在分词 needing", "过去式 needed", "过去分词 needed"], "ex": [["Children need their parents.", "孩子们需要父母。"], ["We need more storage now.", "现在我们需要更多的贮存场所。"]], "lv": "中考"}, "take": {"w": "take", "ph": "teɪk", "defs": ["v. 携带，拿走；带去，引领；使达到，提升；拿，取；移走，拿开；偷走，误拿；取材于，收集；攻占，控制；选中，买下；订阅（报纸等）；吃，服用；减去；记录，摘录；照相，摄影；量取，测定；就（座）；以…...为例；接受，收取；接纳，接待（顾客、患者等）；遭受，经受；忍受，容忍；（以某种方式）对待，处理；理解，考虑；误以为；赢得（比赛、竞赛等）；产生（感情），持有（看法）；采取（措施），采用（方法）；做，拥有；采用（形式），就任（职位）；花费，占用（时间）； 需要，要求；使用；穿（特定尺码的鞋或衣物）；容纳；授课；学习，选修（课程）；参加（考试或测验）；走（路线），乘坐（交通工具）；跨过，跳过；踢，掷；举行投票，进行民意调查；成功，奏效；（语法）需带有（某种结构）", "n. （一次拍摄的）镜头，场景；收入量；看法，态度；（印刷）一次排版量"], "forms": ["复数 takes", "第三人称单数 takes", "现在分词 taking", "过去式 took", "过去分词 taken"], "ex": [["Take whatever action is needed.", "采取任何必要的行动。"], ["I'll take my coat upstairs. Shall I take yours, Roberta?", "我将把我的外套拿到楼上去。要我把你的拿上去吗，罗伯塔？"]], "lv": "中考"}, "don't": {"w": "don't", "ph": "doʊnt", "defs": ["aux. do not 的缩略形式，用于构成否定句、否定疑问句和祈使句，表示否定：不，不要，别。", "n. 禁忌，不许做的事（常用复数 don'ts，常见于 dos and don'ts）"], "forms": [], "ex": [["I don't eat meat.", "我不吃肉。"], ["Heck, if you don't like it, don't vote for him.", "真是的！如果你不喜欢，就不要投他的票。"]], "lv": null}, "habit": {"w": "habit", "ph": "ˈhæbɪt", "defs": ["n. 习惯；（吸毒、喝酒、抽烟的）瘾；道袍，道服；体质，体型", "v. 给……穿衣"], "forms": ["复数 habits", "第三人称单数 habits", "现在分词 habiting", "过去式 habited", "过去分词 habited"], "ex": [["I only do it out of habit.", "我这么做只是出于习惯。"], ["He was not in the habit of ogling women.", "他没有盯着女人看个没完的习惯。"]], "lv": "中考"}, "product": {"w": "product", "ph": "ˈprɑːdʌkt", "defs": ["n. 产品，制品；（自然、化学或工业过程的）生成物；（特定行动、影响或事件的）结局；（受某种环境或经历影响而形成的）产物；积，乘积；总称（商业性）音乐制品"], "forms": ["复数 products"], "ex": [["The product of 21 and 16 is 336.", "21和16的乘积是336。"], ["The product is at the design stage.", "产品处于设计阶段。"]], "lv": "中考"}, "spoil": {"w": "spoil", "ph": "spɔɪl", "defs": ["v. 破坏，糟蹋；溺爱，宠坏；善待，格外关照；（食物）变质，腐败；使（选票）作废；极度渴望，跃跃欲试；抢劫（人，地方），掠夺", "n. 赃物，战利品（the spoils）；成功所带来的好处（spoils）；（开掘时挖出的）废土，废泥土"], "forms": ["复数 spoils", "第三人称单数 spoils", "现在分词 spoiling", "过去式 spoilt或spoiled", "过去分词 spoilt或spoiled"], "ex": [["Don't spoil the children.", "不要溺爱孩子。"], ["Parents should not spoil their children.", "家长不应该溺爱孩子。"]], "lv": "高考"}, "love": {"w": "love", "ph": "lʌv", "defs": ["n. （对家庭成员或挚友的）喜爱，关爱；爱情，恋爱；喜好，喜爱；（昵称）亲爱的；（用于信尾署名前）爱你的；心爱之人，心爱之物；（网球、软式墙网球和其他运动）零分；（用于表示对某人的亲切好感）宝贝（a love）；仁慈的人，乐于助人的人；爱神（Love）", "v. 爱恋（某人）；关爱（尤指家庭成员或密友）；喜欢（某物或某事）；热爱（国家、组织等）；很愿意；感到好笑；适于（某些特定的条件）", "【名】 （Love）（英、菲、瑞、美）洛夫（人名）"], "forms": ["复数 loves", "第三人称单数 loves", "现在分词 loving", "过去式 loved", "过去分词 loved"], "ex": [["I love my country as you love yours.", "我热爱我的国家，就像你热爱你的国家一样。"], ["I'll love you forever!", "我永远爱你！"]], "lv": "中考"}, "key": {"w": "key", "ph": "kiː", "defs": ["n. 钥匙；（电脑、打字机或乐器的）键；关键，要诀；答案；音调，声调；图例，符号说明；低岛，礁；扳手；销子，楔；（文章、形势等）主调，基调；（梣树、枫树或无花果树的）翼果；板条间首层灰泥；（有助于石膏等黏附的）粗糙表面；罚球区", "v. 键入；成为（获胜）的关键；用钥匙划坏（汽车）；用别针（或楔子、栓）固定；将……的表面处理好；给（广告）加识别编码", "adj. 关键的，主要的", "【名】 （Key）（美）基（人名）"], "forms": ["复数 keys", "第三人称单数 keys", "现在分词 keying", "过去式 keyed", "过去分词 keyed"], "ex": [["He turned the key in the lock.", "他转动钥匙开锁。"], ["His contribution could be key.", "他的贡献可能是最重要的。"]], "lv": "中考"}, "pick": {"w": "pick", "ph": "pɪk", "defs": ["v. 采，摘（花、果）；（用手指）弄掉；找茬；捡，抱起；选择；弹，拨（弦）；撬开（锁），扒窃……中的东西；小心走路（~ one's way）；（反复地）拔，拉，撕，扯；没胃口地吃；（高尔夫）拾球（尤指认输的拾球）（~ up）；采，摘（花、果等）", "n. 精华（the pick of）；选择，选择权；被选中的人（或事物）；鹤嘴锄；（吉他的）拨子；（尖状的）挖撬工具；（篮球）掩护", "【名】 （Pick）（英、法、德、捷、匈、瑞典）皮克（人名）"], "forms": ["复数 picks", "第三人称单数 picks", "现在分词 picking", "过去式 picked", "过去分词 picked"], "ex": [["She bent to pick a red rose.", "她弯下腰摘了一朵红玫瑰。"], ["I'll pick you up at five.", "我五点钟来接你。"]], "lv": "中考"}, "novel": {"w": "novel", "ph": "ˈnɑːv(ə)l", "defs": ["n. （长篇）小说", "adj. 新颖的，珍奇的", "【名】 （Novel）（英、法、西）诺韦尔（人名）"], "forms": ["复数 novels", "比较级 more novel", "最高级 most novel"], "ex": [["Have you read her new novel?", "你看过她新出的小说了吗？"], ["The novel is good in parts.", "小说的一些章节不错。"]], "lv": "高考"}, "read": {"w": "read", "ph": "riːd", "defs": ["v. 阅读，读懂；朗读；（在书籍、报纸等中）读到，看到；解读，（按某种方式）理解；看透（想法或心思）；读起来（给人以某种印象）；有……的字样，写着；换用，改作（用于订正讹误）；读取（磁盘中的信息）；（通过无线电）收听到，听明白；（测量仪器）指示，显示；看（度量仪器显示的数字）；攻读；将（议案或其他法令）提交立法机构", "n. 阅读，阅读时间；读物；解释，阐明", "adj. 博学的，有学问的", "【名】 （Read）（英）里德（人名）"], "forms": ["第三人称单数 reads", "现在分词 reading", "过去式 read", "过去分词 read"], "ex": [["What does the thermometer read?", "温度计的读数是多少？"], ["Have you read the contract?", "你看过这份合同了吗？"]], "lv": "中考"}, "mean": {"w": "mean", "ph": "miːn", "defs": ["v. 意味着；表示……的意思，作……的解释；打算，意欲；使专门用于；导致，结果是；十分熟识；当真，说到做到；对某人重要", "adj. 吝啬的，小气的；不善良的，刻薄的；要发怒的；熟练的，出色的；平均的；简陋的，破旧的；微薄的；出身卑贱的，社会地位低下的；中庸的，中等的；凶狠的，好斗的", "n. 中庸，折衷；平均数，中数；中间点", "【名】 （Mean）（柬）棉（人名）"], "forms": ["复数 means", "第三人称单数 means", "现在分词 meaning", "过去式 meant", "过去分词 meant", "比较级 meaner或more mean", "最高级 meanest或most mean"], "ex": [["What does this sentence mean?", "这个句子是什么意思？"], ["You can't possibly mean that!", "你绝不会是那个意思吧！"]], "lv": "中考"}, "keep": {"w": "keep", "ph": "kiːp", "defs": ["v. （使）保持，（使）留在；继续，重复；耽搁，延误；保有，留下；存放，储存；经营，管理；保鲜；保守（秘密）；遵守；记录，记载；饲养；供养；保护；（按规定）纪念，庆祝；守门；尊重（法律或习俗）", "n. 生活必需品，生活费用；城堡主楼", "【名】 （Keep）（英）基普（人名）"], "forms": ["复数 keeps", "第三人称单数 keeps", "现在分词 keeping", "过去式 kept", "过去分词 kept"], "ex": [["Her grandchildren keep her young.", "她的孙子孙女让她保持年轻。"], ["Let's keep in touch.", "咱们保持联系。"]], "lv": "中考"}, "defence": {"w": "defence", "ph": "dɪˈfens", "defs": ["n. 防御，防御物；国防；辩护，答辩；辩方，辩护律师；防守队员，后卫；卫冕", "v. 防御，防守"], "forms": ["复数 defences"], "ex": [["Defence of the realm is crucial.", "王国的防御是至关重要的。"], ["Nobody spoke out in his defence.", "没有人站出来替他辩护。"]], "lv": "高考"}, "against": {"w": "against", "ph": "əˈɡenst", "defs": ["prep. 反对；（行为）违背……；（法律或法规）禁止；与……竞争；对……造成伤害（威胁，不利）；碰；倚着；逆向；以……为背景；与……相比；防备，抵御；讨厌某人，不赞同某人；作为（某物的）应付款项；（赌博用语）预计……的失败"], "forms": [], "ex": [["Rain drove against the window.", "雨打着窗户。"], ["Are we insured against theft?", "我们保了盗窃险没有？"]], "lv": "中考"}, "hurt": {"w": "hurt", "ph": "hɜːrt", "defs": ["v. 使受伤，使疼痛；感到受伤，感到疼痛；损害；处于困境，手头拮据；伤心", "adj. （身体上）受伤的；（感情上）痛苦的", "n. 心灵创伤，委屈；（身体上的）伤，痛", "【名】 （Hurt）（英）赫特，（德、匈、捷）胡特 (人名)"], "forms": ["复数 hurts", "第三人称单数 hurts", "现在分词 hurting", "过去式 hurt", "过去分词 hurt", "比较级 more hurt", "最高级 most hurt"], "ex": [["Did you hurt yourself ?", "你伤着自己了吗？"], ["Have you hurt yourself?", "你伤着自己了吗？"]], "lv": "中考"}, "there'": {"w": "there'", "ph": "", "defs": [], "forms": [], "ex": [["There were thousands of people there.", "那里有成千上万的人。"], ["There were fewer than twenty people there.", "那里有不到二十个人。"]], "lv": null}, "actual": {"w": "actual", "ph": "ˈæktʃuəl", "defs": ["adj. 真实的，实际的，现实的；（用于对比主次方面）真正的；现存的，当前的"], "forms": [], "ex": [["The actual cost was higher than we expected.", "实际成本比我们预计的要高。"], ["First we need to identify actual and potential problems.", "首先，我们需要弄清实际的问题和潜在的问题。"]], "lv": "高考"}, "decisive": {"w": "decisive", "ph": "dɪˈsaɪsɪv", "defs": ["adj. 果断的，决断的；决定性的，关键的；确定的，明确的"], "forms": [], "ex": [["He is decisive and won't shrink from a fight.", "他很果断，而且不会逃避战斗。"], ["The might of the army could prove a decisive factor.", "军队的力量最终可能成为一个决定性的因素。"]], "lv": "四级"}, "hard": {"w": "hard", "ph": "hɑːrd", "defs": ["adj. 硬的，坚固的；困难的；困苦的，艰苦的；费力的，努力的；坚强的，勇敢的；猛烈的，用力的；冷酷的，严厉的；寒冷的，凛冽的；可证实的，确凿的；刺眼的，（感觉上）难受的；（水）硬的；烈性的，强烈的；（酒）苦涩的；仔细的，认真的；严肃的；强壮的；（政治上）极端的；发硬音的", "adv. 努力地，费力地；用力地，猛烈地；仔细地，认真地；沉重地，大量地；变硬；在最大程度上", "n. 海滩路", "【名】 （Hard）（英、芬、瑞典）哈德（人名）"], "forms": [], "ex": [["It's pretty hard to explain.", "这事很难解释清楚。"], ["She tried extra hard.", "她特别努力。"]], "lv": "中考"}, "part": {"w": "part", "ph": "pɑːrt", "defs": ["n. 部分；某物的部分（局部）；（书、戏剧、电视剧等的）部，篇，集；（动植物的）器官，部位；部件，零件；成员，参与人员；（世界、国家或城镇等的）区域，地区；（头发的）分缝；（角色的）台词和动作，角色；（在活动或事件中的）作用；（乐器或声音的）声部，音部；（等）份；能力", "v. （使）分开，（使）分离；分别；分手；放弃，移交；给（头发）分缝", "adv. 既有……又有……（part sth., part sth.）；不完全地，部分地", "adj. 部分的，不完全的", "【名】 （Part）(英、瑞典）帕特，（泰）巴，（法）帕尔（人名）"], "forms": ["复数 parts", "第三人称单数 parts", "现在分词 parting", "过去式 parted", "过去分词 parted"], "ex": [["Part of the roof has caved in.", "部分屋顶已经坍塌了。"], ["She was very good in the part.", "她这个角色演得很好。"]], "lv": "中考"}, "something": {"w": "something", "ph": "ˈsʌmθɪŋ", "defs": ["pron. 某事，某物；……或诸如此类的东西，……什么的；大致，大约，左右；什么什么（用于表示不记得人名、数字的余下部分或歌词等）；还算幸运的事；重要的人（或事）；（想法或建议）有道理，值得考虑；有点儿，有几分", "adv. 稍微，有点；很，非常"], "forms": [], "ex": [["It tastes something like melon.", "这吃起来有点像甜瓜。"], ["He burbled something incomprehensible.", "他嘟嘟囔囔地不知说了些什么。"]], "lv": "中考"}, "the": {"w": "the", "ph": "", "defs": ["art. 这/那（定冠词，表特指）"], "forms": [], "ex": [], "lv": null}, "a": {"w": "a", "ph": "", "defs": ["art. 一个（不定冠词）"], "forms": [], "ex": [], "lv": null}, "this": {"w": "this", "ph": "", "defs": ["pron./adj. 这个"], "forms": [], "ex": [], "lv": null}, "that": {"w": "that", "ph": "", "defs": ["pron./conj. 那个；（引导从句）"], "forms": [], "ex": [], "lv": null}, "and": {"w": "and", "ph": "", "defs": ["conj. 和；并且"], "forms": [], "ex": [], "lv": null}, "so": {"w": "so", "ph": "", "defs": ["adv./conj. 所以；如此"], "forms": [], "ex": [], "lv": null}, "if": {"w": "if", "ph": "", "defs": ["conj. 如果"], "forms": [], "ex": [], "lv": null}, "as": {"w": "as", "ph": "", "defs": ["conj./prep. 随着；作为；如同"], "forms": [], "ex": [], "lv": null}, "because": {"w": "because", "ph": "", "defs": ["conj. 因为"], "forms": [], "ex": [], "lv": null}, "on": {"w": "on", "ph": "", "defs": ["prep. 在…上；关于"], "forms": [], "ex": [], "lv": null}, "from": {"w": "from", "ph": "", "defs": ["prep. 从；来自"], "forms": [], "ex": [], "lv": null}, "to": {"w": "to", "ph": "", "defs": ["prep. 到；向"], "forms": [], "ex": [], "lv": null}, "of": {"w": "of", "ph": "", "defs": ["prep. …的（所属）"], "forms": [], "ex": [], "lv": null}, "up": {"w": "up", "ph": "", "defs": ["adv. 向上"], "forms": [], "ex": [], "lv": null}, "no": {"w": "no", "ph": "", "defs": ["adv./adj. 不；没有"], "forms": [], "ex": [], "lv": null}, "just": {"w": "just", "ph": "", "defs": ["adv. 只是；刚刚"], "forms": [], "ex": [], "lv": null}, "what": {"w": "what", "ph": "", "defs": ["pron. 什么"], "forms": [], "ex": [], "lv": null}, "which": {"w": "which", "ph": "", "defs": ["pron. 哪一个"], "forms": [], "ex": [], "lv": null}};
+const eng = {
+  youdao: u => 'https://dict.youdao.com/dictvoice?type=1&audio=' + encodeURIComponent(u),
+  google: u => 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + encodeURIComponent(u)
+};
+let voices = [], stopFlag = false, audioEl = null, curRow = -1;
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+/* ---------- 句子列表 ---------- */
+let h = '', last = '';
+DATA.forEach((d, i) => {
+  if (d.part !== last) { last = d.part; h += '<div class="part-h">Part ' + d.part + '</div>'; }
+  h += '<div class="row" data-i="' + i + '"><div class="en"><span class="num">' + (i+1) + '</span>'
+     + esc(d.en) + '</div>' + (d.cn ? '<div class="cn">' + esc(d.cn) + '</div>' : '') + '</div>';
+});
+$('list').innerHTML = h;
+
+/* ---------- 语音 ---------- */
+function loadVoices(){
+  const sel = $('voice');
+  voices = speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang));
+  sel.innerHTML = '<option value="">默认语音</option>'
+    + voices.map((v,i) => '<option value="' + i + '">' + esc(v.name) + '</option>').join('');
+  if (!voices.length){
+    $('engine').value = 'youdao';
+    $('status').innerHTML = '本机没有检测到英文语音包，已自动切到<b>在线·有道</b>（需要联网）。';
+  } else {
+    $('status').textContent = '检测到 ' + voices.length + ' 个英文语音，使用本地离线朗读。';
+  }
+}
+speechSynthesis.onvoiceschanged = loadVoices; loadVoices();
+
+function speakLocal(text, done){
+  const u = new SpeechSynthesisUtterance(text);
+  const idx = $('voice').value;
+  if (idx !== '' && voices[idx]) u.voice = voices[idx];
+  u.lang = 'en-US'; u.rate = parseFloat($('rate').value);
+  u.onend = done; u.onerror = done;
+  speechSynthesis.speak(u);
+}
+function splitChunks(text, max){
+  const first = []; let cur = '';
+  text.split(/(?<=[.;:!?])\s+|(?<=,)\s+/).forEach(seg => {
+    if ((cur + ' ' + seg).trim().length > max && cur){ first.push(cur.trim()); cur = seg; }
+    else cur = (cur ? cur + ' ' : '') + seg;
+  });
+  if (cur.trim()) first.push(cur.trim());
+  const res = [];
+  first.forEach(c => {
+    if (c.length <= max){ res.push(c); return; }
+    let buf = '';
+    c.split(/\s+/).forEach(w => {
+      if ((buf + ' ' + w).length > max && buf){ res.push(buf); buf = w; } else buf = buf ? buf + ' ' + w : w;
+    });
+    if (buf) res.push(buf);
+  });
+  return res;
+}
+function speakOnline(text, done){
+  const mk = eng[$('engine').value] || eng.youdao;
+  const arr = splitChunks(text, 170);
+  let k = 0, fail = 0;
+  (function next(){
+    if (stopFlag || k >= arr.length) return done();
+    if (audioEl) audioEl.pause();
+    audioEl = new Audio(mk(arr[k])); k++;
+    audioEl.onended = next;
+    audioEl.onerror = () => { if (++fail >= 2) return done(); next(); };
+    audioEl.play().catch(() => next());
+  })();
+}
+function speak(text, done){
+  if ($('engine').value === 'local' && voices.length) speakLocal(text, done);
+  else speakOnline(text, done);
+}
+
+/* ---------- 生词本 ---------- */
+const VKEY = 'yuedu_vocab';
+let vocab = [];
+try { vocab = JSON.parse(localStorage.getItem(VKEY) || '[]'); } catch(e){ vocab = []; }
+function renderVocab(){
+  $('vocabH').textContent = '⭐ 生词本（' + vocab.length + '）';
+  const ul = $('vocab');
+  ul.innerHTML = '';
+  vocab.forEach((w, i) => {
+    const li = document.createElement('li');
+    const a = document.createElement('span');
+    a.className = 'vw'; a.textContent = w;
+    a.onclick = () => showWord(w, w);
+    const b = document.createElement('span');
+    b.className = 'del'; b.textContent = '×';
+    b.onclick = () => { vocab.splice(i, 1); saveVocab(); };
+    li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+  });
+}
+function saveVocab(){
+  localStorage.setItem(VKEY, JSON.stringify(vocab));
+  renderVocab();
+}
+renderVocab();
+
+/* ---------- 词面板 ---------- */
+function renderSentence(i){
+  curRow = i;
+  document.querySelectorAll('.row.active').forEach(r => r.classList.remove('active'));
+  const row = document.querySelector('.row[data-i="' + i + '"]');
+  if (row) row.classList.add('active');
+  const d = DATA[i];
+  $('sent').innerHTML = '<b>句 ' + (i+1) + '</b>（Part ' + d.part + '）· ' + esc(d.en);
+  const box = $('chips');
+  box.innerHTML = '';
+  (d.tok || []).forEach(p => {
+    const t = p[0], k = p[1];
+    if (/^\s+$/.test(t)){
+      const sp = document.createElement('span'); sp.innerHTML = '&nbsp;'; box.appendChild(sp); return;
+    }
+    if (!/^[A-Za-z]/.test(t)){
+      const sp = document.createElement('span'); sp.className = 'punct'; sp.textContent = t; box.appendChild(sp); return;
+    }
+    const el = document.createElement('span');
+    el.className = 'chip' + (k && BANK[k] ? ' dict' : '');
+    el.textContent = t;
+    el.onclick = () => {
+      box.querySelectorAll('.chip.sel').forEach(x => x.classList.remove('sel'));
+      el.classList.add('sel');
+      showWord(k, t);
+    };
+    box.appendChild(el);
+  });
+  $('card').innerHTML = '<div class="empty">点上面任意单词查看释义。<br>带绿色底线的词，词库已收录。</div>';
+}
+
+function showWord(key, surface){
+  const e = BANK[key];
+  if (!e){
+    $('card').innerHTML = '<div class="hd"><span class="word">' + esc(surface || key) + '</span></div>'
+      + '<div class="empty">词库暂未收录这个词。</div>';
+    return;
+  }
+  let html = '<div class="hd"><span class="word">' + esc(e.w) + '</span>'
+           + (e.ph ? '<span class="phn">/' + esc(e.ph) + '/</span>' : '')
+           + (e.lv ? '<span class="badge lv">' + esc(e.lv) + '</span>' : '')
+           + '<button id="speakW">🔊 朗读</button><button id="starW">⭐</button></div>';
+  if (e.defs && e.defs.length)
+    html += '<div class="sub">释义</div><ul class="defs">' + e.defs.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+  if (e.forms && e.forms.length)
+    html += '<div class="forms">词形变化：' + esc(e.forms.join(' ｜ ')) + '</div>';
+  if (e.ex && e.ex.length){
+    html += '<div class="sub">真实例句（点句朗读）</div>';
+    html += e.ex.map(p => '<div class="ex" data-s="' + esc(p[0]) + '">' + esc(p[0])
+             + '<div class="cnx">' + esc(p[1]) + '</div></div>').join('');
+  }
+  $('card').innerHTML = html;
+  $('speakW').onclick = () => speak(e.w, () => {});
+  const sw = $('starW');
+  const sync = () => {
+    const on = vocab.indexOf(e.w) >= 0;
+    sw.textContent = on ? '★ 已收藏' : '⭐ 收藏';
+    sw.className = on ? 'on' : '';
+  };
+  sw.onclick = () => {
+    const i = vocab.indexOf(e.w);
+    if (i >= 0) vocab.splice(i, 1); else vocab.push(e.w);
+    saveVocab(); sync();
+  };
+  sync();
+  $('card').querySelectorAll('.ex').forEach(el => {
+    el.onclick = () => speak(el.dataset.s, () => {});
+  });
+}
+
+/* ---------- 播放控制 ---------- */
+function clearHL(){ document.querySelectorAll('.row.playing').forEach(r => r.classList.remove('playing')); }
+function highlight(i){
+  clearHL();
+  const el = document.querySelector('.row[data-i="' + i + '"]');
+  if (el){ el.classList.add('playing'); el.scrollIntoView({block:'center', behavior:'smooth'}); }
+}
+function cancelAll(){
+  stopFlag = true;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  if (audioEl){ audioEl.pause(); audioEl = null; }
+}
+async function playFrom(start){
+  stopFlag = false;
+  for (let i = start; i < DATA.length; i++){
+    if (stopFlag) break;
+    highlight(i); renderSentence(i);
+    await new Promise(res => speak(DATA[i].en, res));
+    if (stopFlag) break;
+    await new Promise(res => setTimeout(res, +$('gap').value));
+  }
+  clearHL();
+}
+$('list').addEventListener('click', ev => {
+  const row = ev.target.closest('.row');
+  if (!row) return;
+  cancelAll(); stopFlag = false;
+  const i = +row.dataset.i;
+  highlight(i); renderSentence(i);
+  speak(DATA[i].en, () => {});
+});
+$('playAll').onclick = () => { cancelAll(); playFrom(0); };
+$('stop').onclick = () => { cancelAll(); clearHL(); };
+$('toggleCn').onclick = function(){
+  document.body.classList.toggle('show-cn');
+  this.classList.toggle('on');
+  this.textContent = document.body.classList.contains('show-cn') ? '隐藏中文' : '显示中文';
+};
+$('rate').oninput = () => $('rateVal').textContent = $('rate').value + 'x';
+$('gap').oninput = () => $('gapVal').textContent = ($('gap').value / 1000).toFixed(1) + 's';
+$('engine').onchange = function(){
+  if (this.value === 'local' && !voices.length){
+    this.value = 'youdao';
+    $('status').textContent = '本机没有英文语音包，无法使用本地模式。';
+  } else {
+    $('status').textContent = this.value === 'local'
+      ? '已切换到本地离线朗读。' : '已切换到' + this.options[this.selectedIndex].text + '（需要联网）。';
+  }
+};
+</script>
+</body>
+</html>
