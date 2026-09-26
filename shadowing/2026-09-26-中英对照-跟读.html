@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-09-26-中英对照</title>
+<style>
+:root{
+  --bg:#fbfaf8; --card:#fff; --line:#e6e2dc; --tx:#1f2328; --tx2:#6b7280; --tx3:#9ca3af;
+  --accent:#2f6f4f; --soft:#e8f1ec; --cn:#8a8578; --hl:#fdf3d0; --warn:#b45309;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);
+  font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,248,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:11px 18px}
+h1{font-size:15.5px;margin:0 0 8px;font-weight:650;line-height:1.4}
+h1 small{font-weight:400;color:var(--tx2);font-size:12.5px}
+.bar{display:flex;flex-wrap:wrap;gap:7px;align-items:center;font-size:12.5px}
+button,select{font:inherit;font-size:12.5px;padding:4px 10px;border:1px solid var(--line);
+  background:var(--card);color:var(--tx);border-radius:7px;cursor:pointer}
+button:hover{border-color:var(--accent);color:var(--accent)}
+button.on{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+label{display:flex;align-items:center;gap:5px;color:var(--tx2)}
+input[type=range]{width:88px}
+#status{font-size:12px;color:var(--tx2);margin-top:5px}
+.wrap{display:flex;gap:16px;max-width:1400px;margin:0 auto;padding:16px 18px 60px;align-items:flex-start}
+main{flex:1 1 auto;min-width:0}
+aside{flex:0 0 40%;max-width:520px;position:sticky;top:118px;max-height:calc(100vh - 136px);
+  overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.part-h{margin:20px 0 9px;font-size:13px;font-weight:650;color:var(--accent)}
+.row{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:10px 12px;margin-bottom:7px;cursor:pointer;transition:.15s}
+.row:hover{border-color:var(--accent)}
+.row.playing{background:var(--soft);border-color:var(--accent)}
+.row.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(47,111,79,.13)}
+.en{font-size:15.5px}
+.num{display:inline-block;min-width:30px;color:var(--tx2);font-size:12px;font-variant-numeric:tabular-nums}
+.cn{display:none;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line);color:var(--cn);font-size:13px}
+body.show-cn .cn{display:block}
+.ph{font-size:12.5px;color:var(--tx2);margin:2px 0 10px;line-height:1.65}
+.chips{display:flex;flex-wrap:wrap;gap:4px;line-height:2;margin-bottom:12px}
+.chip{border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:14.5px;cursor:pointer;
+  background:#fdfdfc;transition:.12s}
+.chip:hover{border-color:var(--accent);background:var(--soft)}
+.chip.sel{background:var(--hl);border-color:#d9b648}
+.chip.dict{border-bottom:2px solid #9ccbb0}
+.punct{color:var(--tx3);font-size:14.5px}
+.card{border-top:1px solid var(--line);padding-top:12px;min-height:130px}
+.hd{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.word{font-size:21px;font-weight:650}
+.phn{color:var(--tx2);font-size:13px}
+.badge{font-size:11px;padding:1px 7px;border-radius:20px;background:var(--soft);
+  color:var(--accent);border:1px solid #cfe3d7}
+.badge.lv{background:#fdf0e3;color:var(--warn);border-color:#f0dcbc}
+.defs{margin:6px 0 0;padding-left:18px;font-size:14px}
+.defs li{margin-bottom:3px}
+.forms{font-size:12px;color:var(--tx2);margin-top:8px}
+.sub{margin-top:12px;font-size:12px;font-weight:650;color:var(--accent)}
+.ex{border-left:2px solid #cfe3d7;padding:4px 0 4px 10px;margin:6px 0;font-size:13.5px;cursor:pointer}
+.ex:hover{border-left-color:var(--accent)}
+.ex .cnx{color:var(--cn);font-size:12.5px}
+.empty{color:var(--tx3);font-size:13.5px;padding:18px 0}
+.hint{font-size:12.5px;color:var(--tx2);background:#f2f4f3;border-radius:8px;
+  padding:9px 12px;margin-bottom:12px;line-height:1.7}
+.vocab{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.vocab ul{padding-left:16px;margin:6px 0 0;font-size:13px}
+.vocab li{margin-bottom:2px}
+.vw{cursor:pointer;font-weight:600}
+.vw:hover{color:var(--accent)}
+.del{color:#c0c4c9;cursor:pointer;margin-left:6px}
+footer{max-width:1400px;margin:0 auto;padding:0 18px 30px;font-size:12px;color:var(--tx2)}
+@media (max-width:1000px){
+  .wrap{flex-direction:column}
+  aside{flex:1 1 auto;width:100%;max-width:none;position:static;max-height:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>2026-09-26-中英对照 <small>· 跟读 ＋ 点词查询</small></h1>
+  <div class="bar">
+    <button id="playAll">&#9654; 播放全部</button>
+    <button id="stop">&#9632; 停止</button>
+    <button id="toggleCn">显示中文</button>
+    <select id="engine" title="语音引擎">
+      <option value="local">本地语音（离线）</option>
+      <option value="youdao">在线·有道</option>
+      <option value="google">在线·Google</option>
+    </select>
+    <select id="voice"><option value="">默认语音</option></select>
+    <label>语速 <input type="range" id="rate" min="0.5" max="1.2" step="0.05" value="0.85">
+      <span id="rateVal">0.85x</span></label>
+    <label>停顿 <input type="range" id="gap" min="0" max="2500" step="100" value="1200">
+      <span id="gapVal">1.2s</span></label>
+  </div>
+  <div id="status"></div>
+</header>
+<div class="wrap">
+  <main>
+    <div class="hint">点一句 → 开始朗读，右侧同时把这句话拆成单词。<b>再点任意单词</b>看音标、释义、词形变化和真实例句。底部绿线的词表示词库已收录。</div>
+    <div id="list"></div>
+  </main>
+  <aside>
+    <div id="sent" class="ph">点左侧任意一句开始</div>
+    <div id="chips" class="chips"></div>
+    <div id="card" class="card"><div class="empty">选一个单词查看释义与用法</div></div>
+    <div class="vocab"><span id="vocabH">⭐ 生词本（0）</span><ul id="vocab"></ul></div>
+  </aside>
+</div>
+<footer>共 9 句 · 41 词条 · 数据与词库全部内嵌，离线可用</footer>
+<script>
+const DATA = [{"part": "A", "en": "A lot of success comes from really, really hard work.", "cn": "很多成功，来自极其、极其艰苦的努力。", "tok": [["A", "a"], [" ", ""], ["lot", "lot"], [" ", ""], ["of", "of"], [" ", ""], ["success", "success"], [" ", ""], ["comes", "come"], [" ", ""], ["from", "from"], [" ", ""], ["really", "real"], [",", ""], [" ", ""], ["really", "real"], [" ", ""], ["hard", "hard"], [" ", ""], ["work", "work"], [".", ""]]}, {"part": "A", "en": "Yes.", "cn": "是的。", "tok": [["Yes", "yes"], [".", ""]]}, {"part": "A", "en": "There's long periods of suffering and loneliness and uncertainty and fear and embarrassment and humiliation.", "cn": "中间有大段大段的痛苦、孤独、不确定、恐惧、难堪和屈辱。", "tok": [["There's", "there"], [" ", ""], ["long", "long"], [" ", ""], ["periods", "period"], [" ", ""], ["of", "of"], [" ", ""], ["suffering", "suffer"], [" ", ""], ["and", "and"], [" ", ""], ["loneliness", "loneliness"], [" ", ""], ["and", "and"], [" ", ""], ["uncertainty", "uncertainty"], [" ", ""], ["and", "and"], [" ", ""], ["fear", "fear"], [" ", ""], ["and", "and"], [" ", ""], ["embarrassment", "embarrassment"], [" ", ""], ["and", "and"], [" ", ""], ["humiliation", "humiliation"], [".", ""]]}, {"part": "A", "en": "All of the feelings that we most don't love, when creating something from the ground up.", "cn": "全是我们最不喜欢的那些感受——在你从零开始创造一件东西的时候。", "tok": [["All", "all"], [" ", ""], ["of", "of"], [" ", ""], ["the", "the"], [" ", ""], ["feelings", "feeling"], [" ", ""], ["that", "that"], [" ", ""], ["we", ""], [" ", ""], ["most", "most"], [" ", ""], ["don't", "don't"], [" ", ""], ["love", "love"], [",", ""], [" ", ""], ["when", "when"], [" ", ""], ["creating", "creat"], [" ", ""], ["something", "something"], [" ", ""], ["from", "from"], [" ", ""], ["the", "the"], [" ", ""], ["ground", "ground"], [" ", ""], ["up", "up"], [".", ""]]}, {"part": "A", "en": "And Elon will tell you something similar.", "cn": "埃隆也会跟你说类似的话。", "tok": [["And", "and"], [" ", ""], ["Elon", "elon"], [" ", ""], ["will", "will"], [" ", ""], ["tell", "tell"], [" ", ""], ["you", ""], [" ", ""], ["something", "something"], [" ", ""], ["similar", "similar"], [".", ""]]}, {"part": "A", "en": "Very difficult to invent something new.", "cn": "从零发明一样新东西，非常难。", "tok": [["Very", "very"], [" ", ""], ["difficult", "difficult"], [" ", ""], ["to", "to"], [" ", ""], ["invent", "invent"], [" ", ""], ["something", "something"], [" ", ""], ["new", "new"], [".", ""]]}, {"part": "B", "en": "A lot of success comes from really, really hard work. Yes. There's long periods of suffering and loneliness and uncertainty and fear and embarrassment and humiliation.", "cn": "很多成功，来自极其、极其艰苦的努力。是的。中间有大段大段的痛苦、孤独、不确定、恐惧、难堪和屈辱。", "tok": [["A", "a"], [" ", ""], ["lot", "lot"], [" ", ""], ["of", "of"], [" ", ""], ["success", "success"], [" ", ""], ["comes", "come"], [" ", ""], ["from", "from"], [" ", ""], ["really", "real"], [",", ""], [" ", ""], ["really", "real"], [" ", ""], ["hard", "hard"], [" ", ""], ["work", "work"], [".", ""], [" ", ""], ["Yes", "yes"], [".", ""], [" ", ""], ["There's", "there"], [" ", ""], ["long", "long"], [" ", ""], ["periods", "period"], [" ", ""], ["of", "of"], [" ", ""], ["suffering", "suffer"], [" ", ""], ["and", "and"], [" ", ""], ["loneliness", "loneliness"], [" ", ""], ["and", "and"], [" ", ""], ["uncertainty", "uncertainty"], [" ", ""], ["and", "and"], [" ", ""], ["fear", "fear"], [" ", ""], ["and", "and"], [" ", ""], ["embarrassment", "embarrassment"], [" ", ""], ["and", "and"], [" ", ""], ["humiliation", "humiliation"], [".", ""]]}, {"part": "B", "en": "All of the feelings that we most don't love, when creating something from the ground up. And Elon will tell you something similar. Very difficult to invent something new.", "cn": "全是我们最不喜欢的那些感受——在你从零开始创造一件东西的时候。埃隆也会跟你说类似的话。从零发明一样新东西，非常难。", "tok": [["All", "all"], [" ", ""], ["of", "of"], [" ", ""], ["the", "the"], [" ", ""], ["feelings", "feeling"], [" ", ""], ["that", "that"], [" ", ""], ["we", ""], [" ", ""], ["most", "most"], [" ", ""], ["don't", "don't"], [" ", ""], ["love", "love"], [",", ""], [" ", ""], ["when", "when"], [" ", ""], ["creating", "creat"], [" ", ""], ["something", "something"], [" ", ""], ["from", "from"], [" ", ""], ["the", "the"], [" ", ""], ["ground", "ground"], [" ", ""], ["up", "up"], [".", ""], [" ", ""], ["And", "and"], [" ", ""], ["Elon", "elon"], [" ", ""], ["will", "will"], [" ", ""], ["tell", "tell"], [" ", ""], ["you", ""], [" ", ""], ["something", "something"], [" ", ""], ["similar", "similar"], [".", ""], [" ", ""], ["Very", "very"], [" ", ""], ["difficult", "difficult"], [" ", ""], ["to", "to"], [" ", ""], ["invent", "invent"], [" ", ""], ["something", "something"], [" ", ""], ["new", "new"], [".", ""]]}, {"part": "C", "en": "A lot of success comes from really, really hard work. Yes. There's long periods of suffering and loneliness and uncertainty and fear and embarrassment and humiliation. All of the feelings that we most don't love, when creating something from the ground up. And Elon will tell you something similar. Very difficult to invent something new.", "cn": "很多成功，来自极其、极其艰苦的努力。是的。中间有大段大段的痛苦、孤独、不确定、恐惧、难堪和屈辱。全是我们最不喜欢的那些感受——在你从零开始创造一件东西的时候。埃隆也会跟你说类似的话。从零发明一样新东西，非常难。", "tok": [["A", "a"], [" ", ""], ["lot", "lot"], [" ", ""], ["of", "of"], [" ", ""], ["success", "success"], [" ", ""], ["comes", "come"], [" ", ""], ["from", "from"], [" ", ""], ["really", "real"], [",", ""], [" ", ""], ["really", "real"], [" ", ""], ["hard", "hard"], [" ", ""], ["work", "work"], [".", ""], [" ", ""], ["Yes", "yes"], [".", ""], [" ", ""], ["There's", "there"], [" ", ""], ["long", "long"], [" ", ""], ["periods", "period"], [" ", ""], ["of", "of"], [" ", ""], ["suffering", "suffer"], [" ", ""], ["and", "and"], [" ", ""], ["loneliness", "loneliness"], [" ", ""], ["and", "and"], [" ", ""], ["uncertainty", "uncertainty"], [" ", ""], ["and", "and"], [" ", ""], ["fear", "fear"], [" ", ""], ["and", "and"], [" ", ""], ["embarrassment", "embarrassment"], [" ", ""], ["and", "and"], [" ", ""], ["humiliation", "humiliation"], [".", ""], [" ", ""], ["All", "all"], [" ", ""], ["of", "of"], [" ", ""], ["the", "the"], [" ", ""], ["feelings", "feeling"], [" ", ""], ["that", "that"], [" ", ""], ["we", ""], [" ", ""], ["most", "most"], [" ", ""], ["don't", "don't"], [" ", ""], ["love", "love"], [",", ""], [" ", ""], ["when", "when"], [" ", ""], ["creating", "creat"], [" ", ""], ["something", "something"], [" ", ""], ["from", "from"], [" ", ""], ["the", "the"], [" ", ""], ["ground", "ground"], [" ", ""], ["up", "up"], [".", ""], [" ", ""], ["And", "and"], [" ", ""], ["Elon", "elon"], [" ", ""], ["will", "will"], [" ", ""], ["tell", "tell"], [" ", ""], ["you", ""], [" ", ""], ["something", "something"], [" ", ""], ["similar", "similar"], [".", ""], [" ", ""], ["Very", "very"], [" ", ""], ["difficult", "difficult"], [" ", ""], ["to", "to"], [" ", ""], ["invent", "invent"], [" ", ""], ["something", "something"], [" ", ""], ["new", "new"], [".", ""]]}];
+const BANK = {"lot": {"w": "lot", "ph": "lɑːt", "defs": ["n. (常sing.) 一群，一批；小块土地；电影摄制场；（汽车经销处的）停车场；拍卖品；全体成员；（尤指不太好的）命运, 处境；签，阄；一群，一批", "v. （拍卖前）将（商品）分成批组", "pron. 大量，许多；所有，全部", "adv. 很多地，非常（a lot）"], "forms": ["复数 lots", "第三人称单数 lots", "现在分词 lotting", "过去式 lotted", "过去分词 lotted"], "ex": [["I listened to a lot of people handing out a lot of advice.", "我听了许多人给予的很多忠告。"], ["She does a lot of quilting.", "她做了很多被子。"]], "lv": "中考"}, "success": {"w": "success", "ph": "səkˈses", "defs": ["n. 成功，胜利；发财，成名；成功的人（或事物）"], "forms": ["复数 successes"], "ex": [["I wish her success, because this is really difficult.", "我祝她成功吧，因为这个很难做。"], ["The book ensured his success.", "这本书保证了他的成功。"]], "lv": "中考"}, "come": {"w": "come", "ph": "kʌm", "defs": ["v. 来；来到，到达；来做，来取；同行，同去；行进（一定距离）来；赶走（某人）；变成，成为；达到，进入（某种状态或境地）；（事件）发生，（时间）到来；（提及的时间）到来；（如何）发生，出现；备有，可提供；达到（某一点或水准）；（经过时间的流逝）开始认为；想起，想到；谈论，谈到；位于，处于；（信件或消息）被收到；由……继承，归……所有；（案件）提交……审理；总共，共计；出身于；由……引起；（性质）体现出来", "int. （用以鼓励或安慰）好了，得啦", "n. 精液，精子", "【名】 （Come）（英）科姆，（阿尔巴）乔梅（人名）"], "forms": ["第三人称单数 comes", "现在分词 coming", "过去式 came", "过去分词 come"], "ex": [["Have you come far?", "你是远道来的吗？"], ["Can I come too?", "我也可以来吗？"]], "lv": "中考"}, "real": {"w": "real", "ph": "ˈriːəl", "defs": ["adj. 实际存在的，非想象的；名副其实的；真正的，真实的；真的，非人工的；真诚的；强烈的；确实重大的；十足的，绝对的（用来加强语气）；（数量、数字）真实的，实际的；（光学）（图像）实的；（书或电影中的场景）逼真的，似真的；（哲学）实在的", "adv. 很，非常地", "n. 雷阿尔（巴西1994年以来的基本货币单位，等于100分）；雷阿尔（多个西班牙语国家以前的硬币和货币单位）", "【名】 （Real）（德、西、葡、法）雷亚尔，（英）里尔（人名）"], "forms": ["复数 reals或reales或reais或reis"], "ex": [["She's a real cosmopolitan.", "她是个真正的四海为家的人。"], ["Are those real flowers?", "那些是真花吗？"]], "lv": "中考"}, "hard": {"w": "hard", "ph": "hɑːrd", "defs": ["adj. 硬的，坚固的；困难的；困苦的，艰苦的；费力的，努力的；坚强的，勇敢的；猛烈的，用力的；冷酷的，严厉的；寒冷的，凛冽的；可证实的，确凿的；刺眼的，（感觉上）难受的；（水）硬的；烈性的，强烈的；（酒）苦涩的；仔细的，认真的；严肃的；强壮的；（政治上）极端的；发硬音的", "adv. 努力地，费力地；用力地，猛烈地；仔细地，认真地；沉重地，大量地；变硬；在最大程度上", "n. 海滩路", "【名】 （Hard）（英、芬、瑞典）哈德（人名）"], "forms": [], "ex": [["It's pretty hard to explain.", "这事很难解释清楚。"], ["She tried extra hard.", "她特别努力。"]], "lv": "中考"}, "work": {"w": "work", "ph": "wɜːrk", "defs": ["n. 工作，职业；劳动，活计；职责，工作内容；作品，著作；工作成果，作为；工作地点，工作时间；工作所需的材料（或档案等）；（机器的）活动部件（the works）；所有东西，全套物品（the works）；土木工程，建筑（works）；工厂（works）；善行，德行（works）；防御工事；（物理学）功；整形手术", "v. 工作，干活儿；从事体力（或脑力）劳动；从事……工作，在……工作；努力取得，力争；运转，运行；开动，操作（机器、装置等）；奏效，成功；产生……作用；（使）变成，逐步移动；（使）（身体某部位）抽动；（用某种材料）画画，创作；使成形，加工；博得，赢得（众人的支持或欢心）；计算，算出；思考，动脑筋；以（某种假定或思想）为基础（或前提）；安排；耕种；开采（矿）", "adj. 工作的，与工作有关的；适合工作时穿戴的；用于工作的", "【名】 （Work）（英、埃塞、丹、冰、美）沃克（人名）"], "forms": ["复数 works", "第三人称单数 works", "现在分词 working", "过去式 worked或wrought", "过去分词 worked或wrought"], "ex": [["They work terrifically fast.", "他们工作极快。"], ["Work is proceeding slowly.", "工作进展缓慢。"]], "lv": "中考"}, "yes": {"w": "yes", "ph": "jes", "defs": ["adv. 是，是的，对；是吗？（升调，表示疑问或请对方继续说）", "n. 是（表示肯定），肯定答复；赞成票"], "forms": ["复数 yesses或yeses", "第三人称单数 yesses或yeses", "现在分词 yessing", "过去式 yessed", "过去分词 yessed"], "ex": [["Yes, there's plenty of room.", "是的，还很空呢。"], ["Yes, officer, I saw what happened.", "是，警察先生，我看到了发生的事。"]], "lv": "中考"}, "long": {"w": "long", "ph": "lɔːŋ", "defs": ["adj. 长的；长久的，长期的；漫长的；长篇的；长音的；出界的；（面部表情）不高兴的，愁苦的；记得牢的，记得久的；（可能性，机会）小的，渺茫的；远期（获利）的；（酒与凉饮料）混合的，大量的；（运动中的球）长传的，远距离的", "adv. 长久地，长期地；很久（以前或以后）；整个（时间段）；（球扔得）远；整个 (时间段)", "v. 渴望", "n. 长时间，长时期；长音；远期证券；长期资本", "【名】 （Long）（美、英、爱）隆（人名）"], "forms": ["复数 longs", "第三人称单数 longs", "现在分词 longing", "过去式 longed", "过去分词 longed", "比较级 longer", "最高级 longest"], "ex": [["The bureaucrats dallied too long.", "官僚们延误了太长时间。"], ["The long blades clashed together.", "长刀相击铿然作响。"]], "lv": "中考"}, "period": {"w": "period", "ph": "ˈpɪriəd", "defs": ["n. 一段时间，时期；（人生或国家历史的）阶段，时代；（地质年代划分的）纪；课时，节；（练习、训练或学习的）时段；（妇女的）月经，经期；（体育比赛的）局；句号，句点；（物理）（振动或循环的）周期；（天文）自转（或公转）周期；（数学）（周期函数的）周期；（化学）周期元素；（修辞）完整句；（乐）乐段，乐节", "adj. 具有某个时代特征的", "adv. 到此为止，不再说了"], "forms": ["复数 periods"], "ex": [["When did you last have a period ?", "你上一次月经是什么时候？"], ["It was a period of intense activity.", "那是活动激烈的时期。"]], "lv": "中考"}, "suffer": {"w": "suffer", "ph": "ˈsʌfər", "defs": ["v. （因疾病、痛苦、悲伤等）受苦，受折磨；经受，遭受（坏事）；变差，变糟；容许，允许；受处决"], "forms": ["第三人称单数 suffers", "现在分词 suffering", "过去式 suffered", "过去分词 suffered"], "ex": [["Let the people suffer. I will take blame.", "苦一苦百姓，骂名我来担！"], ["Your Majesty, you have made Shilan suffer so bitterly.", "皇上，你害得世兰好苦啊。"]], "lv": "高考"}, "loneliness": {"w": "loneliness", "ph": "ˈloʊnlinəs", "defs": ["n. 孤独，寂寞"], "forms": [], "ex": [["He felt a sudden inexpressible loneliness.", "他突然有种难以言喻的孤独感。"], ["Many deaf people have feelings of isolation and loneliness.", "许多失聪的人有孤独和寂寞的感觉。"]], "lv": "高考"}, "uncertainty": {"w": "uncertainty", "ph": "ʌnˈsɜːrt(ə)nti", "defs": ["n.  犹豫，无把握；拿不定的事，令人无把握的局面；紧张不安"], "forms": ["复数 uncertainties"], "ex": [["It was a time of terrible uncertainty.", "那是一段非常不确定的时期。"], ["They hoped the waiting and the uncertainty would wear down my resistance.", "他们希望这种等待和不确定性会削弱我的抵抗。"]], "lv": "四级"}, "fear": {"w": "fear", "ph": "fɪr", "defs": ["v. 害怕，畏惧；担心，忧虑；敬畏", "n. 恐惧；担心；（坏事发生的）可能性；敬畏"], "forms": ["复数 fears", "第三人称单数 fears", "现在分词 fearing", "过去式 feared", "过去分词 feared"], "ex": [["Fear clutched at her heart.", "她突然感到一阵恐惧袭上心头。"], ["All his employees fear him.", "他的雇员都怕他。"]], "lv": "中考"}, "embarrassment": {"w": "embarrassment", "ph": "ɪmˈbærəsmənt", "defs": ["n. 尴尬，难堪；使人难堪的人（或事）；拮据，经济困难；（可供挑选的）众多事物"], "forms": ["复数 embarrassments"], "ex": [["Embarrassment rooted her to the spot.", "她尴尬得呆住了。"], ["She couldn't disguise her glee at their embarrassment.", "看到他们难堪的样子她不禁喜形于色。"]], "lv": "四级"}, "humiliation": {"w": "humiliation", "ph": "hjuːˌmɪliˈeɪʃn", "defs": ["n. 耻辱，蒙羞；丢脸的事，尴尬的场合"], "forms": ["复数 humiliations"], "ex": [["Mary did not even try to control her rage and humiliation.", "玛丽甚至没有试图控制她的愤怒和屈辱。"], ["Humiliation is the greatest fear; self-exposure and failing to appeal to the audience come a close second.", "羞辱是最大的恐惧；紧随其后的是自我暴露和无法吸引观众。"]], "lv": "六级"}, "feeling": {"w": "feeling", "ph": "ˈfiːlɪŋ", "defs": ["n. 感觉，感触；预感；看法，态度；情感，情绪；理解力，领悟力；好感，同情；知觉；氛围；品质，特点", "adj. 多愁善感的，多情的", "v. 感受到，体会到；觉得，相信；使人感觉……(feel 的现在分词形式)"], "forms": ["复数 feelings"], "ex": [["She's feeling a little homesick.", "她感到有些想家了。"], ["Are you feeling all right?", "你感觉还好吗？"]], "lv": "中考"}, "don't": {"w": "don't", "ph": "doʊnt", "defs": ["aux. do not 的缩略形式，用于构成否定句、否定疑问句和祈使句，表示否定：不，不要，别。", "n. 禁忌，不许做的事（常用复数 don'ts，常见于 dos and don'ts）"], "forms": [], "ex": [["I don't eat meat.", "我不吃肉。"], ["Heck, if you don't like it, don't vote for him.", "真是的！如果你不喜欢，就不要投他的票。"]], "lv": null}, "love": {"w": "love", "ph": "lʌv", "defs": ["n. （对家庭成员或挚友的）喜爱，关爱；爱情，恋爱；喜好，喜爱；（昵称）亲爱的；（用于信尾署名前）爱你的；心爱之人，心爱之物；（网球、软式墙网球和其他运动）零分；（用于表示对某人的亲切好感）宝贝（a love）；仁慈的人，乐于助人的人；爱神（Love）", "v. 爱恋（某人）；关爱（尤指家庭成员或密友）；喜欢（某物或某事）；热爱（国家、组织等）；很愿意；感到好笑；适于（某些特定的条件）", "【名】 （Love）（英、菲、瑞、美）洛夫（人名）"], "forms": ["复数 loves", "第三人称单数 loves", "现在分词 loving", "过去式 loved", "过去分词 loved"], "ex": [["I love my country as you love yours.", "我热爱我的国家，就像你热爱你的国家一样。"], ["I'll love you forever!", "我永远爱你！"]], "lv": "中考"}, "creat": {"w": "creat", "ph": "", "defs": ["n. 穿心莲（印度草药）"], "forms": [], "ex": [["Creat a space between skin and muscle.", "在皮肤与肌肉之间创造一个空间。"], ["Grasp opportunity to creat the future.", "抓紧机会，鳦创造未来。"]], "lv": null}, "something": {"w": "something", "ph": "ˈsʌmθɪŋ", "defs": ["pron. 某事，某物；……或诸如此类的东西，……什么的；大致，大约，左右；什么什么（用于表示不记得人名、数字的余下部分或歌词等）；还算幸运的事；重要的人（或事）；（想法或建议）有道理，值得考虑；有点儿，有几分", "adv. 稍微，有点；很，非常"], "forms": [], "ex": [["It tastes something like melon.", "这吃起来有点像甜瓜。"], ["He burbled something incomprehensible.", "他嘟嘟囔囔地不知说了些什么。"]], "lv": "中考"}, "ground": {"w": "ground", "ph": "ɡraʊnd", "defs": ["n. 地，地面；土地，土壤；（某种用途的）场地；充分的理由，根据；话题，知识领域；观点，立场；优势，有利条件；地线；庭院，花园；渣滓；（绘画或印刷的）背景，底子", "v. 以……为根据；（在某学科上）给……以扎实的基础教育；使停飞；禁足；（使）搁浅；落地，着陆；把……放在地上，以……触地；把（电器）接地；（击球员）击出内场地滚球被杀出局", "adj. 切碎的，磨碎的；（航空用语）地面的，地勤的；打磨成的，磨光的；生活于地面、地下或水底的", "v. 研磨（grind 的过去式和过去分词形式）"], "forms": ["复数 grounds", "第三人称单数 grounds", "现在分词 grounding", "过去式 grounded", "过去分词 grounded"], "ex": [["The ground was frozen solid.", "地面冻得硬邦邦的。"], ["Madigan's horse pawed the ground.", "马迪根的马刨了地。"]], "lv": "中考"}, "elon": {"w": "elon", "ph": "", "defs": ["n. 埃伦（可溶性显影剂粉末）", "n. （Elon）人名；（英、以）埃隆"], "forms": [], "ex": [["The super-rich Richard Branson, Jeff Bezos and Elon Musk are all pouring money into developing business space flying machines.", "超级富豪理查德·布兰森、杰夫·贝佐斯和埃隆·马斯克都在投资开发商业太空飞行器。"], ["When Elon Musk says that his new priority is using artificial intelligence to build domestic robots, we should look forward to the day in admiration.", "埃隆·马斯克表示，他的新首要任务是利用人工智能制造家用机器人，我们应该怀着钦佩的心情期待这一天的到来。"]], "lv": null}, "tell": {"w": "tell", "ph": "tel", "defs": ["v. 告诉，告知；说，讲述；吐露，显示；看出，确切地判断；辨别，区别；命令，吩咐；告诉自己，暗自叮嘱；表明，说明；（不快的或令人疲倦的经历）产生效果，产生影响；泄密；数，计算；（通常指小孩）告状；警告，告诫；（某种因素）影响，起作用", "n. （尤作纸牌用语）（泄露试图作弊的）不经意动作；（中东）台形（土墩）遗址（由远古人村落遗迹堆积而成的）", "【名】 （Tell）泰尔（人名）"], "forms": ["复数 tells", "第三人称单数 tells", "现在分词 telling", "过去式 told", "过去分词 told"], "ex": [["Tell me what really happened.", "告诉我究竟发生了什么事。"], ["I didn't tell anyone, honestly!", "我确实没告诉过任何人！"]], "lv": "中考"}, "similar": {"w": "similar", "ph": "ˈsɪmələr", "defs": ["adj. 相像的，类似的；（几何图形）相似的", "n. 相似之人（或物）；顺势药物（指疗效与某些疾病症状相似的药物，为顺势疗法的基础）"], "forms": ["复数 similars", "比较级 more similar", "最高级 most similar"], "ex": [["They have uncannily similar voices.", "他们有着出奇相似的嗓音。"], ["The brothers look very similar.", "弟兄几个长得很像。"]], "lv": "中考"}, "difficult": {"w": "difficult", "ph": "ˈdɪfɪkəlt", "defs": ["adj. 困难的，费力的；不友好的，难对付的"], "forms": [], "ex": [["The exam was quite difficult.", "这场考试相当难。"], ["The exam was pretty difficult.", "这场考试相当难。"]], "lv": "中考"}, "invent": {"w": "invent", "ph": "ɪnˈvent", "defs": ["v. 发明，创造；编造，虚构"], "forms": ["第三人称单数 invents", "现在分词 inventing", "过去式 invented", "过去分词 invented"], "ex": [["So they proceeded to invent the verge-and-foliot escapement.", "所以他们着手发明了立轴横杆式擒纵机构。"], ["Alexander Graham Bell did not invent the telephone overnight.", "亚历山大·格雷厄姆·贝尔并非在一夜之间发明了电话。"]], "lv": "中考"}, "new": {"w": "new", "ph": "nuː", "defs": ["adj. 新出现的，新兴的；新买的；未用过的，崭新的；有别于从前的，新颖的；新发现的，新近知道的；生疏的，未体验过的；现代的，最新型的；新时期的，新开始的；富有朝气的，生气勃勃的；时鲜的（蔬菜）；更新的，变样的", "adv. （用于构成复合词）新的，新近的", "n. 新东西，新事物（the new）", "【名】 （New）（英）纽（人名）"], "forms": [], "ex": [["New England is beautiful.", "新英格兰很迷人。"], ["My new shoes squeak.", "我的新皮鞋走路嘎吱嘎吱响。"]], "lv": "中考"}, "the": {"w": "the", "ph": "", "defs": ["art. 这/那（定冠词，表特指）"], "forms": [], "ex": [], "lv": null}, "a": {"w": "a", "ph": "", "defs": ["art. 一个（不定冠词）"], "forms": [], "ex": [], "lv": null}, "that": {"w": "that", "ph": "", "defs": ["pron./conj. 那个；（引导从句）"], "forms": [], "ex": [], "lv": null}, "and": {"w": "and", "ph": "", "defs": ["conj. 和；并且"], "forms": [], "ex": [], "lv": null}, "from": {"w": "from", "ph": "", "defs": ["prep. 从；来自"], "forms": [], "ex": [], "lv": null}, "to": {"w": "to", "ph": "", "defs": ["prep. 到；向"], "forms": [], "ex": [], "lv": null}, "of": {"w": "of", "ph": "", "defs": ["prep. …的（所属）"], "forms": [], "ex": [], "lv": null}, "up": {"w": "up", "ph": "", "defs": ["adv. 向上"], "forms": [], "ex": [], "lv": null}, "very": {"w": "very", "ph": "", "defs": ["adv. 非常"], "forms": [], "ex": [], "lv": null}, "there": {"w": "there", "ph": "", "defs": ["adv. 那里；（there be 表存在）"], "forms": [], "ex": [], "lv": null}, "when": {"w": "when", "ph": "", "defs": ["adv./conj. 何时；当…时"], "forms": [], "ex": [], "lv": null}, "all": {"w": "all", "ph": "", "defs": ["adj./pron. 全部"], "forms": [], "ex": [], "lv": null}, "most": {"w": "most", "ph": "", "defs": ["adj./adv. 最；大多数"], "forms": [], "ex": [], "lv": null}, "will": {"w": "will", "ph": "", "defs": ["v./n. 将要；意志"], "forms": [], "ex": [], "lv": null}};
+const eng = {
+  youdao: u => 'https://dict.youdao.com/dictvoice?type=1&audio=' + encodeURIComponent(u),
+  google: u => 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + encodeURIComponent(u)
+};
+let voices = [], stopFlag = false, audioEl = null, curRow = -1;
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+/* ---------- 句子列表 ---------- */
+let h = '', last = '';
+DATA.forEach((d, i) => {
+  if (d.part !== last) { last = d.part; h += '<div class="part-h">Part ' + d.part + '</div>'; }
+  h += '<div class="row" data-i="' + i + '"><div class="en"><span class="num">' + (i+1) + '</span>'
+     + esc(d.en) + '</div>' + (d.cn ? '<div class="cn">' + esc(d.cn) + '</div>' : '') + '</div>';
+});
+$('list').innerHTML = h;
+
+/* ---------- 语音 ---------- */
+function loadVoices(){
+  const sel = $('voice');
+  voices = speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang));
+  sel.innerHTML = '<option value="">默认语音</option>'
+    + voices.map((v,i) => '<option value="' + i + '">' + esc(v.name) + '</option>').join('');
+  if (!voices.length){
+    $('engine').value = 'youdao';
+    $('status').innerHTML = '本机没有检测到英文语音包，已自动切到<b>在线·有道</b>（需要联网）。';
+  } else {
+    $('status').textContent = '检测到 ' + voices.length + ' 个英文语音，使用本地离线朗读。';
+  }
+}
+speechSynthesis.onvoiceschanged = loadVoices; loadVoices();
+
+function speakLocal(text, done){
+  const u = new SpeechSynthesisUtterance(text);
+  const idx = $('voice').value;
+  if (idx !== '' && voices[idx]) u.voice = voices[idx];
+  u.lang = 'en-US'; u.rate = parseFloat($('rate').value);
+  u.onend = done; u.onerror = done;
+  speechSynthesis.speak(u);
+}
+function splitChunks(text, max){
+  const first = []; let cur = '';
+  text.split(/(?<=[.;:!?])\s+|(?<=,)\s+/).forEach(seg => {
+    if ((cur + ' ' + seg).trim().length > max && cur){ first.push(cur.trim()); cur = seg; }
+    else cur = (cur ? cur + ' ' : '') + seg;
+  });
+  if (cur.trim()) first.push(cur.trim());
+  const res = [];
+  first.forEach(c => {
+    if (c.length <= max){ res.push(c); return; }
+    let buf = '';
+    c.split(/\s+/).forEach(w => {
+      if ((buf + ' ' + w).length > max && buf){ res.push(buf); buf = w; } else buf = buf ? buf + ' ' + w : w;
+    });
+    if (buf) res.push(buf);
+  });
+  return res;
+}
+function speakOnline(text, done){
+  const mk = eng[$('engine').value] || eng.youdao;
+  const arr = splitChunks(text, 170);
+  let k = 0, fail = 0;
+  (function next(){
+    if (stopFlag || k >= arr.length) return done();
+    if (audioEl) audioEl.pause();
+    audioEl = new Audio(mk(arr[k])); k++;
+    audioEl.onended = next;
+    audioEl.onerror = () => { if (++fail >= 2) return done(); next(); };
+    audioEl.play().catch(() => next());
+  })();
+}
+function speak(text, done){
+  if ($('engine').value === 'local' && voices.length) speakLocal(text, done);
+  else speakOnline(text, done);
+}
+
+/* ---------- 生词本 ---------- */
+const VKEY = 'yuedu_vocab';
+let vocab = [];
+try { vocab = JSON.parse(localStorage.getItem(VKEY) || '[]'); } catch(e){ vocab = []; }
+function renderVocab(){
+  $('vocabH').textContent = '⭐ 生词本（' + vocab.length + '）';
+  const ul = $('vocab');
+  ul.innerHTML = '';
+  vocab.forEach((w, i) => {
+    const li = document.createElement('li');
+    const a = document.createElement('span');
+    a.className = 'vw'; a.textContent = w;
+    a.onclick = () => showWord(w, w);
+    const b = document.createElement('span');
+    b.className = 'del'; b.textContent = '×';
+    b.onclick = () => { vocab.splice(i, 1); saveVocab(); };
+    li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+  });
+}
+function saveVocab(){
+  localStorage.setItem(VKEY, JSON.stringify(vocab));
+  renderVocab();
+}
+renderVocab();
+
+/* ---------- 词面板 ---------- */
+function renderSentence(i){
+  curRow = i;
+  document.querySelectorAll('.row.active').forEach(r => r.classList.remove('active'));
+  const row = document.querySelector('.row[data-i="' + i + '"]');
+  if (row) row.classList.add('active');
+  const d = DATA[i];
+  $('sent').innerHTML = '<b>句 ' + (i+1) + '</b>（Part ' + d.part + '）· ' + esc(d.en);
+  const box = $('chips');
+  box.innerHTML = '';
+  (d.tok || []).forEach(p => {
+    const t = p[0], k = p[1];
+    if (/^\s+$/.test(t)){
+      const sp = document.createElement('span'); sp.innerHTML = '&nbsp;'; box.appendChild(sp); return;
+    }
+    if (!/^[A-Za-z]/.test(t)){
+      const sp = document.createElement('span'); sp.className = 'punct'; sp.textContent = t; box.appendChild(sp); return;
+    }
+    const el = document.createElement('span');
+    el.className = 'chip' + (k && BANK[k] ? ' dict' : '');
+    el.textContent = t;
+    el.onclick = () => {
+      box.querySelectorAll('.chip.sel').forEach(x => x.classList.remove('sel'));
+      el.classList.add('sel');
+      showWord(k, t);
+    };
+    box.appendChild(el);
+  });
+  $('card').innerHTML = '<div class="empty">点上面任意单词查看释义。<br>带绿色底线的词，词库已收录。</div>';
+}
+
+function showWord(key, surface){
+  const e = BANK[key];
+  if (!e){
+    $('card').innerHTML = '<div class="hd"><span class="word">' + esc(surface || key) + '</span></div>'
+      + '<div class="empty">词库暂未收录这个词。</div>';
+    return;
+  }
+  let html = '<div class="hd"><span class="word">' + esc(e.w) + '</span>'
+           + (e.ph ? '<span class="phn">/' + esc(e.ph) + '/</span>' : '')
+           + (e.lv ? '<span class="badge lv">' + esc(e.lv) + '</span>' : '')
+           + '<button id="speakW">🔊 朗读</button><button id="starW">⭐</button></div>';
+  if (e.defs && e.defs.length)
+    html += '<div class="sub">释义</div><ul class="defs">' + e.defs.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+  if (e.forms && e.forms.length)
+    html += '<div class="forms">词形变化：' + esc(e.forms.join(' ｜ ')) + '</div>';
+  if (e.ex && e.ex.length){
+    html += '<div class="sub">真实例句（点句朗读）</div>';
+    html += e.ex.map(p => '<div class="ex" data-s="' + esc(p[0]) + '">' + esc(p[0])
+             + '<div class="cnx">' + esc(p[1]) + '</div></div>').join('');
+  }
+  $('card').innerHTML = html;
+  $('speakW').onclick = () => speak(e.w, () => {});
+  const sw = $('starW');
+  const sync = () => {
+    const on = vocab.indexOf(e.w) >= 0;
+    sw.textContent = on ? '★ 已收藏' : '⭐ 收藏';
+    sw.className = on ? 'on' : '';
+  };
+  sw.onclick = () => {
+    const i = vocab.indexOf(e.w);
+    if (i >= 0) vocab.splice(i, 1); else vocab.push(e.w);
+    saveVocab(); sync();
+  };
+  sync();
+  $('card').querySelectorAll('.ex').forEach(el => {
+    el.onclick = () => speak(el.dataset.s, () => {});
+  });
+}
+
+/* ---------- 播放控制 ---------- */
+function clearHL(){ document.querySelectorAll('.row.playing').forEach(r => r.classList.remove('playing')); }
+function highlight(i){
+  clearHL();
+  const el = document.querySelector('.row[data-i="' + i + '"]');
+  if (el){ el.classList.add('playing'); el.scrollIntoView({block:'center', behavior:'smooth'}); }
+}
+function cancelAll(){
+  stopFlag = true;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  if (audioEl){ audioEl.pause(); audioEl = null; }
+}
+async function playFrom(start){
+  stopFlag = false;
+  for (let i = start; i < DATA.length; i++){
+    if (stopFlag) break;
+    highlight(i); renderSentence(i);
+    await new Promise(res => speak(DATA[i].en, res));
+    if (stopFlag) break;
+    await new Promise(res => setTimeout(res, +$('gap').value));
+  }
+  clearHL();
+}
+$('list').addEventListener('click', ev => {
+  const row = ev.target.closest('.row');
+  if (!row) return;
+  cancelAll(); stopFlag = false;
+  const i = +row.dataset.i;
+  highlight(i); renderSentence(i);
+  speak(DATA[i].en, () => {});
+});
+$('playAll').onclick = () => { cancelAll(); playFrom(0); };
+$('stop').onclick = () => { cancelAll(); clearHL(); };
+$('toggleCn').onclick = function(){
+  document.body.classList.toggle('show-cn');
+  this.classList.toggle('on');
+  this.textContent = document.body.classList.contains('show-cn') ? '隐藏中文' : '显示中文';
+};
+$('rate').oninput = () => $('rateVal').textContent = $('rate').value + 'x';
+$('gap').oninput = () => $('gapVal').textContent = ($('gap').value / 1000).toFixed(1) + 's';
+$('engine').onchange = function(){
+  if (this.value === 'local' && !voices.length){
+    this.value = 'youdao';
+    $('status').textContent = '本机没有英文语音包，无法使用本地模式。';
+  } else {
+    $('status').textContent = this.value === 'local'
+      ? '已切换到本地离线朗读。' : '已切换到' + this.options[this.selectedIndex].text + '（需要联网）。';
+  }
+};
+</script>
+</body>
+</html>
