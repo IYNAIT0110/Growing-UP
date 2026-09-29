@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-09-29-中英对照</title>
+<style>
+:root{
+  --bg:#fbfaf8; --card:#fff; --line:#e6e2dc; --tx:#1f2328; --tx2:#6b7280; --tx3:#9ca3af;
+  --accent:#2f6f4f; --soft:#e8f1ec; --cn:#8a8578; --hl:#fdf3d0; --warn:#b45309;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);
+  font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+header{position:sticky;top:0;z-index:20;background:rgba(251,250,248,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:11px 18px}
+h1{font-size:15.5px;margin:0 0 8px;font-weight:650;line-height:1.4}
+h1 small{font-weight:400;color:var(--tx2);font-size:12.5px}
+.bar{display:flex;flex-wrap:wrap;gap:7px;align-items:center;font-size:12.5px}
+button,select{font:inherit;font-size:12.5px;padding:4px 10px;border:1px solid var(--line);
+  background:var(--card);color:var(--tx);border-radius:7px;cursor:pointer}
+button:hover{border-color:var(--accent);color:var(--accent)}
+button.on{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+label{display:flex;align-items:center;gap:5px;color:var(--tx2)}
+input[type=range]{width:88px}
+#status{font-size:12px;color:var(--tx2);margin-top:5px}
+.wrap{display:flex;gap:16px;max-width:1400px;margin:0 auto;padding:16px 18px 60px;align-items:flex-start}
+main{flex:1 1 auto;min-width:0}
+aside{flex:0 0 40%;max-width:520px;position:sticky;top:118px;max-height:calc(100vh - 136px);
+  overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.part-h{margin:20px 0 9px;font-size:13px;font-weight:650;color:var(--accent)}
+.row{background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:10px 12px;margin-bottom:7px;cursor:pointer;transition:.15s}
+.row:hover{border-color:var(--accent)}
+.row.playing{background:var(--soft);border-color:var(--accent)}
+.row.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(47,111,79,.13)}
+.en{font-size:15.5px}
+.num{display:inline-block;min-width:30px;color:var(--tx2);font-size:12px;font-variant-numeric:tabular-nums}
+.cn{display:none;margin-top:7px;padding-top:7px;border-top:1px dashed var(--line);color:var(--cn);font-size:13px}
+body.show-cn .cn{display:block}
+.ph{font-size:12.5px;color:var(--tx2);margin:2px 0 10px;line-height:1.65}
+.chips{display:flex;flex-wrap:wrap;gap:4px;line-height:2;margin-bottom:12px}
+.chip{border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:14.5px;cursor:pointer;
+  background:#fdfdfc;transition:.12s}
+.chip:hover{border-color:var(--accent);background:var(--soft)}
+.chip.sel{background:var(--hl);border-color:#d9b648}
+.chip.dict{border-bottom:2px solid #9ccbb0}
+.punct{color:var(--tx3);font-size:14.5px}
+.card{border-top:1px solid var(--line);padding-top:12px;min-height:130px}
+.hd{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.word{font-size:21px;font-weight:650}
+.phn{color:var(--tx2);font-size:13px}
+.badge{font-size:11px;padding:1px 7px;border-radius:20px;background:var(--soft);
+  color:var(--accent);border:1px solid #cfe3d7}
+.badge.lv{background:#fdf0e3;color:var(--warn);border-color:#f0dcbc}
+.defs{margin:6px 0 0;padding-left:18px;font-size:14px}
+.defs li{margin-bottom:3px}
+.forms{font-size:12px;color:var(--tx2);margin-top:8px}
+.sub{margin-top:12px;font-size:12px;font-weight:650;color:var(--accent)}
+.ex{border-left:2px solid #cfe3d7;padding:4px 0 4px 10px;margin:6px 0;font-size:13.5px;cursor:pointer}
+.ex:hover{border-left-color:var(--accent)}
+.ex .cnx{color:var(--cn);font-size:12.5px}
+.empty{color:var(--tx3);font-size:13.5px;padding:18px 0}
+.hint{font-size:12.5px;color:var(--tx2);background:#f2f4f3;border-radius:8px;
+  padding:9px 12px;margin-bottom:12px;line-height:1.7}
+.vocab{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}
+.vocab ul{padding-left:16px;margin:6px 0 0;font-size:13px}
+.vocab li{margin-bottom:2px}
+.vw{cursor:pointer;font-weight:600}
+.vw:hover{color:var(--accent)}
+.del{color:#c0c4c9;cursor:pointer;margin-left:6px}
+footer{max-width:1400px;margin:0 auto;padding:0 18px 30px;font-size:12px;color:var(--tx2)}
+@media (max-width:1000px){
+  .wrap{flex-direction:column}
+  aside{flex:1 1 auto;width:100%;max-width:none;position:static;max-height:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>2026-09-29-中英对照 <small>· 跟读 ＋ 点词查询</small></h1>
+  <div class="bar">
+    <button id="playAll">&#9654; 播放全部</button>
+    <button id="stop">&#9632; 停止</button>
+    <button id="toggleCn">显示中文</button>
+    <select id="engine" title="语音引擎">
+      <option value="local">本地语音（离线）</option>
+      <option value="youdao">在线·有道</option>
+      <option value="google">在线·Google</option>
+    </select>
+    <select id="voice"><option value="">默认语音</option></select>
+    <label>语速 <input type="range" id="rate" min="0.5" max="1.2" step="0.05" value="0.85">
+      <span id="rateVal">0.85x</span></label>
+    <label>停顿 <input type="range" id="gap" min="0" max="2500" step="100" value="1200">
+      <span id="gapVal">1.2s</span></label>
+  </div>
+  <div id="status"></div>
+</header>
+<div class="wrap">
+  <main>
+    <div class="hint">点一句 → 开始朗读，右侧同时把这句话拆成单词。<b>再点任意单词</b>看音标、释义、词形变化和真实例句。底部绿线的词表示词库已收录。</div>
+    <div id="list"></div>
+  </main>
+  <aside>
+    <div id="sent" class="ph">点左侧任意一句开始</div>
+    <div id="chips" class="chips"></div>
+    <div id="card" class="card"><div class="empty">选一个单词查看释义与用法</div></div>
+    <div class="vocab"><span id="vocabH">⭐ 生词本（0）</span><ul id="vocab"></ul></div>
+  </aside>
+</div>
+<footer>共 16 句 · 84 词条 · 数据与词库全部内嵌，离线可用</footer>
+<script>
+const DATA = [{"part": "A", "en": "To be optimistic about the future, there's no point in being pessimistic.", "cn": "想要对未来保持乐观，那就没有必要悲观。", "tok": [["To", "to"], [" ", ""], ["be", ""], [" ", ""], ["optimistic", "optimistic"], [" ", ""], ["about", "about"], [" ", ""], ["the", "the"], [" ", ""], ["future", "future"], [",", ""], [" ", ""], ["there's", "there"], [" ", ""], ["no", "no"], [" ", ""], ["point", "point"], [" ", ""], ["in", "in"], [" ", ""], ["being", ""], [" ", ""], ["pessimistic", "pessimistic"], [".", ""]]}, {"part": "A", "en": "It's just too negative.", "cn": "那实在太消极了。", "tok": [["It's", "it's"], [" ", ""], ["just", "just"], [" ", ""], ["too", ""], [" ", ""], ["negative", "negative"], [".", ""]]}, {"part": "A", "en": "I'd rather be optimistic and wrong than pessimistic and right.", "cn": "我宁愿乐观而错，也不愿悲观而对。", "tok": [["I'd", "i'd"], [" ", ""], ["rather", "rather"], [" ", ""], ["be", ""], [" ", ""], ["optimistic", "optimistic"], [" ", ""], ["and", "and"], [" ", ""], ["wrong", "wrong"], [" ", ""], ["than", "than"], [" ", ""], ["pessimistic", "pessimistic"], [" ", ""], ["and", "and"], [" ", ""], ["right", "right"], [".", ""]]}, {"part": "A", "en": "At least we're on that side.", "cn": "至少我们还站在这一边。", "tok": [["At", "at"], [" ", ""], ["least", "least"], [" ", ""], ["we're", "we're"], [" ", ""], ["on", "on"], [" ", ""], ["that", "that"], [" ", ""], ["side", "side"], [".", ""]]}, {"part": "A", "en": "This is a serious situation.", "cn": "这是一个很严峻的处境。", "tok": [["This", "this"], [" ", ""], ["is", ""], [" ", ""], ["a", "a"], [" ", ""], ["serious", "serious"], [" ", ""], ["situation", "situation"], [".", ""]]}, {"part": "A", "en": "People are graduating and not getting jobs in their major.", "cn": "人们毕业了，却找不到本专业的工作。", "tok": [["People", "people"], [" ", ""], ["are", ""], [" ", ""], ["graduating", "graduat"], [" ", ""], ["and", "and"], [" ", ""], ["not", "not"], [" ", ""], ["getting", "get"], [" ", ""], ["jobs", "jobs"], [" ", ""], ["in", "in"], [" ", ""], ["their", ""], [" ", ""], ["major", "major"], [".", ""]]}, {"part": "A", "en": "The job market is too crowded.", "cn": "就业市场太拥挤了。", "tok": [["The", "the"], [" ", ""], ["job", "job"], [" ", ""], ["market", "market"], [" ", ""], ["is", ""], [" ", ""], ["too", ""], [" ", ""], ["crowded", "crowd"], [".", ""]]}, {"part": "A", "en": "It's like they sold you this dream where you're gonna go to school, and if you graduate and you turn in all your work on time, then you're gonna have two and a half, 2.5 kids in this nice suburban home and be able to afford this Benz, and people end up waitressing and doing jobs that they hate.", "cn": "就像他们把这样一个梦卖给了你：你去上学，只要你毕业、按时交上你所有的作业，你就会有「两个半」——2.5 个孩子，住进郊区一栋不错的好房子，还买得起一辆奔驰；而人们最后去当了服务员，干着自己讨厌的工作。", "tok": [["It's", "it's"], [" ", ""], ["like", "like"], [" ", ""], ["they", ""], [" ", ""], ["sold", "sold"], [" ", ""], ["you", ""], [" ", ""], ["this", "this"], [" ", ""], ["dream", "dream"], [" ", ""], ["where", ""], [" ", ""], ["you're", "you're"], [" ", ""], ["gonna", "gonna"], [" ", ""], ["go", "go"], [" ", ""], ["to", "to"], [" ", ""], ["school", "school"], [",", ""], [" ", ""], ["and", "and"], [" ", ""], ["if", "if"], [" ", ""], ["you", ""], [" ", ""], ["graduate", "graduate"], [" ", ""], ["and", "and"], [" ", ""], ["you", ""], [" ", ""], ["turn", "turn"], [" ", ""], ["in", "in"], [" ", ""], ["all", "all"], [" ", ""], ["your", ""], [" ", ""], ["work", "work"], [" ", ""], ["on", "on"], [" ", ""], ["time", "time"], [",", ""], [" ", ""], ["then", "then"], [" ", ""], ["you're", "you're"], [" ", ""], ["gonna", "gonna"], [" ", ""], ["have", ""], [" ", ""], ["two", "two"], [" ", ""], ["and", "and"], [" ", ""], ["a", "a"], [" ", ""], ["half", "half"], [",", ""], [" ", ""], ["2.5", ""], [" ", ""], ["kids", "kids"], [" ", ""], ["in", "in"], [" ", ""], ["this", "this"], [" ", ""], ["nice", "nice"], [" ", ""], ["suburban", "suburban"], [" ", ""], ["home", "home"], [" ", ""], ["and", "and"], [" ", ""], ["be", ""], [" ", ""], ["able", "able"], [" ", ""], ["to", "to"], [" ", ""], ["afford", "afford"], [" ", ""], ["this", "this"], [" ", ""], ["Benz", "benz"], [",", ""], [" ", ""], ["and", "and"], [" ", ""], ["people", "people"], [" ", ""], ["end", "end"], [" ", ""], ["up", "up"], [" ", ""], ["waitressing", "waitres"], [" ", ""], ["and", "and"], [" ", ""], ["doing", "do"], [" ", ""], ["jobs", "jobs"], [" ", ""], ["that", "that"], [" ", ""], ["they", ""], [" ", ""], ["hate", "hate"], [".", ""]]}, {"part": "A", "en": "What I meant — I tried to make an album that I felt would be a time capsule for this decade, not only year 2004.", "cn": "我想说的是——我试图做一张专辑，我认为它会成为这个十年的「时间胶囊」，而不只是 2004 年。", "tok": [["What", "what"], [" ", ""], ["I", ""], [" ", ""], ["meant", "mean"], [" ", ""], ["—", ""], [" ", ""], ["I", ""], [" ", ""], ["tried", "tri"], [" ", ""], ["to", "to"], [" ", ""], ["make", "make"], [" ", ""], ["an", "an"], [" ", ""], ["album", "album"], [" ", ""], ["that", "that"], [" ", ""], ["I", ""], [" ", ""], ["felt", "feel"], [" ", ""], ["would", "would"], [" ", ""], ["be", ""], [" ", ""], ["a", "a"], [" ", ""], ["time", "time"], [" ", ""], ["capsule", "capsule"], [" ", ""], ["for", "for"], [" ", ""], ["this", "this"], [" ", ""], ["decade", "decade"], [",", ""], [" ", ""], ["not", "not"], [" ", ""], ["only", "only"], [" ", ""], ["year", "year"], [" ", ""], ["2004", ""], [".", ""]]}, {"part": "A", "en": "That's why the first thing you heard was drug dealing just to get by.", "cn": "所以，你听到的第一句，就是为了活下去而贩毒。", "tok": [["That's", "that"], [" ", ""], ["why", "why"], [" ", ""], ["the", "the"], [" ", ""], ["first", "first"], [" ", ""], ["thing", "thing"], [" ", ""], ["you", ""], [" ", ""], ["heard", "hear"], [" ", ""], ["was", ""], [" ", ""], ["drug", "drug"], [" ", ""], ["dealing", "deal"], [" ", ""], ["just", "just"], [" ", ""], ["to", "to"], [" ", ""], ["get", "get"], [" ", ""], ["by", "by"], [".", ""]]}, {"part": "B", "en": "To be optimistic about the future, there's no point in being pessimistic. It's just too negative.", "cn": "想要对未来保持乐观，那就没有必要悲观。那实在太消极了。", "tok": [["To", "to"], [" ", ""], ["be", ""], [" ", ""], ["optimistic", "optimistic"], [" ", ""], ["about", "about"], [" ", ""], ["the", "the"], [" ", ""], ["future", "future"], [",", ""], [" ", ""], ["there's", "there"], [" ", ""], ["no", "no"], [" ", ""], ["point", "point"], [" ", ""], ["in", "in"], [" ", ""], ["being", ""], [" ", ""], ["pessimistic", "pessimistic"], [".", ""], [" ", ""], ["It's", "it's"], [" ", ""], ["just", "just"], [" ", ""], ["too", ""], [" ", ""], ["negative", "negative"], [".", ""]]}, {"part": "B", "en": "I'd rather be optimistic and wrong than pessimistic and right. At least we're on that side.", "cn": "我宁愿乐观而错，也不愿悲观而对。至少我们还站在这一边。", "tok": [["I'd", "i'd"], [" ", ""], ["rather", "rather"], [" ", ""], ["be", ""], [" ", ""], ["optimistic", "optimistic"], [" ", ""], ["and", "and"], [" ", ""], ["wrong", "wrong"], [" ", ""], ["than", "than"], [" ", ""], ["pessimistic", "pessimistic"], [" ", ""], ["and", "and"], [" ", ""], ["right", "right"], [".", ""], [" ", ""], ["At", "at"], [" ", ""], ["least", "least"], [" ", ""], ["we're", "we're"], [" ", ""], ["on", "on"], [" ", ""], ["that", "that"], [" ", ""], ["side", "side"], [".", ""]]}, {"part": "B", "en": "This is a serious situation. People are graduating and not getting jobs in their major. The job market is too crowded.", "cn": "这是一个很严峻的处境。人们毕业了，却找不到本专业的工作。就业市场太拥挤了。", "tok": [["This", "this"], [" ", ""], ["is", ""], [" ", ""], ["a", "a"], [" ", ""], ["serious", "serious"], [" ", ""], ["situation", "situation"], [".", ""], [" ", ""], ["People", "people"], [" ", ""], ["are", ""], [" ", ""], ["graduating", "graduat"], [" ", ""], ["and", "and"], [" ", ""], ["not", "not"], [" ", ""], ["getting", "get"], [" ", ""], ["jobs", "jobs"], [" ", ""], ["in", "in"], [" ", ""], ["their", ""], [" ", ""], ["major", "major"], [".", ""], [" ", ""], ["The", "the"], [" ", ""], ["job", "job"], [" ", ""], ["market", "market"], [" ", ""], ["is", ""], [" ", ""], ["too", ""], [" ", ""], ["crowded", "crowd"], [".", ""]]}, {"part": "B", "en": "It's like they sold you this dream where you're gonna go to school, and if you graduate and you turn in all your work on time, then you're gonna have two and a half, 2.5 kids in this nice suburban home and be able to afford this Benz, and people end up waitressing and doing jobs that they hate. What I meant — I tried to make an album that I felt would be a time capsule for this decade, not only year 2004. That's why the first thing you heard was drug dealing just to get by.", "cn": "就像他们把这样一个梦卖给了你：你去上学，只要你毕业、按时交上你所有的作业，你就会有「两个半」——2.5 个孩子，住进郊区一栋不错的好房子，还买得起一辆奔驰；而人们最后去当了服务员，干着自己讨厌的工作。我想说的是——我试图做一张专辑，我认为它会成为这个十年的「时间胶囊」，而不只是 2004 年。所以，你听到的第一句，就是为了活下去而贩毒。", "tok": [["It's", "it's"], [" ", ""], ["like", "like"], [" ", ""], ["they", ""], [" ", ""], ["sold", "sold"], [" ", ""], ["you", ""], [" ", ""], ["this", "this"], [" ", ""], ["dream", "dream"], [" ", ""], ["where", ""], [" ", ""], ["you're", "you're"], [" ", ""], ["gonna", "gonna"], [" ", ""], ["go", "go"], [" ", ""], ["to", "to"], [" ", ""], ["school", "school"], [",", ""], [" ", ""], ["and", "and"], [" ", ""], ["if", "if"], [" ", ""], ["you", ""], [" ", ""], ["graduate", "graduate"], [" ", ""], ["and", "and"], [" ", ""], ["you", ""], [" ", ""], ["turn", "turn"], [" ", ""], ["in", "in"], [" ", ""], ["all", "all"], [" ", ""], ["your", ""], [" ", ""], ["work", "work"], [" ", ""], ["on", "on"], [" ", ""], ["time", "time"], [",", ""], [" ", ""], ["then", "then"], [" ", ""], ["you're", "you're"], [" ", ""], ["gonna", "gonna"], [" ", ""], ["have", ""], [" ", ""], ["two", "two"], [" ", ""], ["and", "and"], [" ", ""], ["a", "a"], [" ", ""], ["half", "half"], [",", ""], [" ", ""], ["2.5", ""], [" ", ""], ["kids", "kids"], [" ", ""], ["in", "in"], [" ", ""], ["this", "this"], [" ", ""], ["nice", "nice"], [" ", ""], ["suburban", "suburban"], [" ", ""], ["home", "home"], [" ", ""], ["and", "and"], [" ", ""], ["be", ""], [" ", ""], ["able", "able"], [" ", ""], ["to", "to"], [" ", ""], ["afford", "afford"], [" ", ""], ["this", "this"], [" ", ""], ["Benz", "benz"], [",", ""], [" ", ""], ["and", "and"], [" ", ""], ["people", "people"], [" ", ""], ["end", "end"], [" ", ""], ["up", "up"], [" ", ""], ["waitressing", "waitres"], [" ", ""], ["and", "and"], [" ", ""], ["doing", "do"], [" ", ""], ["jobs", "jobs"], [" ", ""], ["that", "that"], [" ", ""], ["they", ""], [" ", ""], ["hate", "hate"], [".", ""], [" ", ""], ["What", "what"], [" ", ""], ["I", ""], [" ", ""], ["meant", "mean"], [" ", ""], ["—", ""], [" ", ""], ["I", ""], [" ", ""], ["tried", "tri"], [" ", ""], ["to", "to"], [" ", ""], ["make", "make"], [" ", ""], ["an", "an"], [" ", ""], ["album", "album"], [" ", ""], ["that", "that"], [" ", ""], ["I", ""], [" ", ""], ["felt", "feel"], [" ", ""], ["would", "would"], [" ", ""], ["be", ""], [" ", ""], ["a", "a"], [" ", ""], ["time", "time"], [" ", ""], ["capsule", "capsule"], [" ", ""], ["for", "for"], [" ", ""], ["this", "this"], [" ", ""], ["decade", "decade"], [",", ""], [" ", ""], ["not", "not"], [" ", ""], ["only", "only"], [" ", ""], ["year", "year"], [" ", ""], ["2004", ""], [".", ""], [" ", ""], ["That's", "that"], [" ", ""], ["why", "why"], [" ", ""], ["the", "the"], [" ", ""], ["first", "first"], [" ", ""], ["thing", "thing"], [" ", ""], ["you", ""], [" ", ""], ["heard", "hear"], [" ", ""], ["was", ""], [" ", ""], ["drug", "drug"], [" ", ""], ["dealing", "deal"], [" ", ""], ["just", "just"], [" ", ""], ["to", "to"], [" ", ""], ["get", "get"], [" ", ""], ["by", "by"], [".", ""]]}, {"part": "C", "en": "To be optimistic about the future, there's no point in being pessimistic. It's just too negative. I'd rather be optimistic and wrong than pessimistic and right. At least we're on that side.", "cn": "想要对未来保持乐观，那就没有必要悲观。那实在太消极了。我宁愿乐观而错，也不愿悲观而对。至少我们还站在这一边。", "tok": [["To", "to"], [" ", ""], ["be", ""], [" ", ""], ["optimistic", "optimistic"], [" ", ""], ["about", "about"], [" ", ""], ["the", "the"], [" ", ""], ["future", "future"], [",", ""], [" ", ""], ["there's", "there"], [" ", ""], ["no", "no"], [" ", ""], ["point", "point"], [" ", ""], ["in", "in"], [" ", ""], ["being", ""], [" ", ""], ["pessimistic", "pessimistic"], [".", ""], [" ", ""], ["It's", "it's"], [" ", ""], ["just", "just"], [" ", ""], ["too", ""], [" ", ""], ["negative", "negative"], [".", ""], [" ", ""], ["I'd", "i'd"], [" ", ""], ["rather", "rather"], [" ", ""], ["be", ""], [" ", ""], ["optimistic", "optimistic"], [" ", ""], ["and", "and"], [" ", ""], ["wrong", "wrong"], [" ", ""], ["than", "than"], [" ", ""], ["pessimistic", "pessimistic"], [" ", ""], ["and", "and"], [" ", ""], ["right", "right"], [".", ""], [" ", ""], ["At", "at"], [" ", ""], ["least", "least"], [" ", ""], ["we're", "we're"], [" ", ""], ["on", "on"], [" ", ""], ["that", "that"], [" ", ""], ["side", "side"], [".", ""]]}, {"part": "C", "en": "This is a serious situation. People are graduating and not getting jobs in their major. The job market is too crowded. It's like they sold you this dream where you're gonna go to school, and if you graduate and you turn in all your work on time, then you're gonna have two and a half, 2.5 kids in this nice suburban home and be able to afford this Benz, and people end up waitressing and doing jobs that they hate. What I meant — I tried to make an album that I felt would be a time capsule for this decade, not only year 2004. That's why the first thing you heard was drug dealing just to get by.", "cn": "这是一个很严峻的处境。人们毕业了，却找不到本专业的工作。就业市场太拥挤了。就像他们把这样一个梦卖给了你：你去上学，只要你毕业、按时交上你所有的作业，你就会有「两个半」——2.5 个孩子，住进郊区一栋不错的好房子，还买得起一辆奔驰；而人们最后去当了服务员，干着自己讨厌的工作。我想说的是——我试图做一张专辑，我认为它会成为这个十年的「时间胶囊」，而不只是 2004 年。所以，你听到的第一句，就是为了活下去而贩毒。", "tok": [["This", "this"], [" ", ""], ["is", ""], [" ", ""], ["a", "a"], [" ", ""], ["serious", "serious"], [" ", ""], ["situation", "situation"], [".", ""], [" ", ""], ["People", "people"], [" ", ""], ["are", ""], [" ", ""], ["graduating", "graduat"], [" ", ""], ["and", "and"], [" ", ""], ["not", "not"], [" ", ""], ["getting", "get"], [" ", ""], ["jobs", "jobs"], [" ", ""], ["in", "in"], [" ", ""], ["their", ""], [" ", ""], ["major", "major"], [".", ""], [" ", ""], ["The", "the"], [" ", ""], ["job", "job"], [" ", ""], ["market", "market"], [" ", ""], ["is", ""], [" ", ""], ["too", ""], [" ", ""], ["crowded", "crowd"], [".", ""], [" ", ""], ["It's", "it's"], [" ", ""], ["like", "like"], [" ", ""], ["they", ""], [" ", ""], ["sold", "sold"], [" ", ""], ["you", ""], [" ", ""], ["this", "this"], [" ", ""], ["dream", "dream"], [" ", ""], ["where", ""], [" ", ""], ["you're", "you're"], [" ", ""], ["gonna", "gonna"], [" ", ""], ["go", "go"], [" ", ""], ["to", "to"], [" ", ""], ["school", "school"], [",", ""], [" ", ""], ["and", "and"], [" ", ""], ["if", "if"], [" ", ""], ["you", ""], [" ", ""], ["graduate", "graduate"], [" ", ""], ["and", "and"], [" ", ""], ["you", ""], [" ", ""], ["turn", "turn"], [" ", ""], ["in", "in"], [" ", ""], ["all", "all"], [" ", ""], ["your", ""], [" ", ""], ["work", "work"], [" ", ""], ["on", "on"], [" ", ""], ["time", "time"], [",", ""], [" ", ""], ["then", "then"], [" ", ""], ["you're", "you're"], [" ", ""], ["gonna", "gonna"], [" ", ""], ["have", ""], [" ", ""], ["two", "two"], [" ", ""], ["and", "and"], [" ", ""], ["a", "a"], [" ", ""], ["half", "half"], [",", ""], [" ", ""], ["2.5", ""], [" ", ""], ["kids", "kids"], [" ", ""], ["in", "in"], [" ", ""], ["this", "this"], [" ", ""], ["nice", "nice"], [" ", ""], ["suburban", "suburban"], [" ", ""], ["home", "home"], [" ", ""], ["and", "and"], [" ", ""], ["be", ""], [" ", ""], ["able", "able"], [" ", ""], ["to", "to"], [" ", ""], ["afford", "afford"], [" ", ""], ["this", "this"], [" ", ""], ["Benz", "benz"], [",", ""], [" ", ""], ["and", "and"], [" ", ""], ["people", "people"], [" ", ""], ["end", "end"], [" ", ""], ["up", "up"], [" ", ""], ["waitressing", "waitres"], [" ", ""], ["and", "and"], [" ", ""], ["doing", "do"], [" ", ""], ["jobs", "jobs"], [" ", ""], ["that", "that"], [" ", ""], ["they", ""], [" ", ""], ["hate", "hate"], [".", ""], [" ", ""], ["What", "what"], [" ", ""], ["I", ""], [" ", ""], ["meant", "mean"], [" ", ""], ["—", ""], [" ", ""], ["I", ""], [" ", ""], ["tried", "tri"], [" ", ""], ["to", "to"], [" ", ""], ["make", "make"], [" ", ""], ["an", "an"], [" ", ""], ["album", "album"], [" ", ""], ["that", "that"], [" ", ""], ["I", ""], [" ", ""], ["felt", "feel"], [" ", ""], ["would", "would"], [" ", ""], ["be", ""], [" ", ""], ["a", "a"], [" ", ""], ["time", "time"], [" ", ""], ["capsule", "capsule"], [" ", ""], ["for", "for"], [" ", ""], ["this", "this"], [" ", ""], ["decade", "decade"], [",", ""], [" ", ""], ["not", "not"], [" ", ""], ["only", "only"], [" ", ""], ["year", "year"], [" ", ""], ["2004", ""], [".", ""], [" ", ""], ["That's", "that"], [" ", ""], ["why", "why"], [" ", ""], ["the", "the"], [" ", ""], ["first", "first"], [" ", ""], ["thing", "thing"], [" ", ""], ["you", ""], [" ", ""], ["heard", "hear"], [" ", ""], ["was", ""], [" ", ""], ["drug", "drug"], [" ", ""], ["dealing", "deal"], [" ", ""], ["just", "just"], [" ", ""], ["to", "to"], [" ", ""], ["get", "get"], [" ", ""], ["by", "by"], [".", ""]]}];
+const BANK = {"optimistic": {"w": "optimistic", "ph": "ˌɑːptɪˈmɪstɪk", "defs": ["adj. 乐观的，乐观主义的；（估计）过于乐观的，高估的"], "forms": [], "ex": [["I'm cautiously optimistic.", "我持谨慎的乐观态度。"], ["He has an optimistic view of life.", "他乐观地看待人生。"]], "lv": "高考"}, "point": {"w": "point", "ph": "pɔɪnt", "defs": ["n. 观点，论点；要点，核心问题；目的，意图；具体细节；特点，特征；地点；时刻，阶段；得分；小数点，点；罗盘（方位）点；点（标度）；（电影的）利润百分比；尖端，尖头；岬角；光点，色点；插座；（字号的）磅值；轨尖，道岔（points）；（芭蕾）脚尖（points）；（分电器中的）接点；称赞，认可（points）；（板球）防守；尖兵队；排头位置；（动物的）外部位；（猎）直窜（位置）；束衣带；束帆绳；狗指方向；（乐曲的）重要乐句或主题", "v. 指，指向；对准，瞄准；朝向，对着；指路；引导，指引；暗示，表明；强调（话语或行动）；（用水泥）勾缝；绷直（脚趾）；削尖；使（光标）指着；插入点号；（狗）示意有（猎物）", "【名】 （Point）（法）普安（人名）"], "forms": ["复数 points", "第三人称单数 points", "现在分词 pointing", "过去式 pointed", "过去分词 pointed"], "ex": [["This last point is crucial.", "刚讲的这一点是关键的。"], ["Let's consider this point further.", "让我们更深入地考虑这一点。"]], "lv": "中考"}, "it's": {"w": "it's", "ph": "ɪts", "defs": ["abbr. 它是（it is 的缩约形式）；它已，它有（it has 的缩约形式，尤作助动词）"], "forms": [], "ex": [["It's just as dramatic as a film, only it's real.", "这真和电影一样富有戏剧性，只不过它是现实。"], ["It's not rubbish—it's true!", "这不是瞎说—是真的！"]], "lv": null}, "rather": {"w": "rather", "ph": "ˈræðər", "defs": ["adv. 颇，相当；宁愿，最好（would rather）；而不是；更确切地说；（用以使表达的语气婉转）有几分，有点儿；恰恰相反，而是", "int. 当然，的确（表同意）", "【名】  （Rather）（英）拉瑟（人名）"], "forms": [], "ex": [["The leaves taste rather bitter.", "这些叶子尝起来相当苦。"], ["I did have rather spindly legs.", "我的腿以前细长而纤弱。"]], "lv": "中考"}, "wrong": {"w": "wrong", "ph": "rɔːŋ", "defs": ["adj. 错误的，不合乎事实的；（状况）有问题的，（身体）有毛病的；（决定、选择、行动等）错误的；（言论或想法）错的；不道德的，不能被社会所接受的；不合适的，不适宜的；（机器设备）出毛病的；上下（或前后、里外）颠倒的", "adv. 错误地，不符合事实地；（方式或方向）不适当地，不适宜地；出问题；不正当地", "n. 坏事，不道德行为， 错误的行为（或情况）；冤枉，不公平的行为", "v. 不公正地对待，冤枉", "【名】 （Wrong）（美、俄、荷）朗（人名）"], "forms": ["复数 wrongs", "第三人称单数 wrongs", "现在分词 wronging", "过去式 wronged", "过去分词 wronged"], "ex": [["'That is wrong,' he asserted.", "“那是错的。”他断言道。"], ["'You're wrong!' she rejoined.", "“你错了！”她反驳道。"]], "lv": "中考"}, "right": {"w": "right", "ph": "raɪt", "defs": ["adj. 符合道德的，正当的；正确的，真实的；（人、物）合适的，般配的；（意见，判断）对的；右边的，右侧的；（状态或情况）健康的，正常的； 十足的，真正的（用于强调某人或某物多么糟糕）；正面的，外面的；时尚的，上流社会的；（人或政党）支持保守观点的，右翼的", "v. 纠正，矫正；补救，扭转；把（尤指小船）扶正，使直立", "n. 正当，公正；正当的要求，权利；版权，发行权（rights）；右边，右方（the right）；右拐，右转弯；右边的路（或入口）；（足球等运动）右外场；部队的右翼；右翼组织，右派政党（the right/the Right）；右翼人士的立场，右翼立场（the right）；右手拳", "adv. （地方、位置或时间）正好，就在；直接地，径直地；一直地，完全地；立即，毫不耽搁；正确地，确切地；顺利，正常；在右面，向右边；（政治上）右倾地；用右手地；彻底地，十足地", "int. 好的，对（用于表示明白或同意某人的话）；好（用于引起注意）；对吗（用于确认自己说的话是否正确）；（表示不相信或不同意）是吗，好哇；对不对，懂吗（用于确认对方是否在听并明白你说的话）", "【名】 （Right）（英）赖特（人名）"], "forms": ["复数 rights", "第三人称单数 rights", "现在分词 righting", "过去式 righted", "过去分词 righted"], "ex": [["That's absolutely right.", "那是完全正确的。"], ["You're absolutely right.", "你完全正确。"]], "lv": "中考"}, "least": {"w": "least", "ph": "liːst", "defs": ["adj. 一点儿；最少的（little 的最高级）；最微不足道的（little 的最高级形式）；用于极小动植物的名称，如least shrew（little 的最高级形式）", "adv. 最低程度地；最少，至少", "n. 最不重要的事物，最微小的事物；至少，起码", "pron. 最少量；起码", "det. 最少的，最小的"], "forms": [], "ex": [["It'll cost at least 500 dollars.", "这东西至少要花500元。"], ["At least he knew right from wrong.", "至少他明白是非。"]], "lv": "中考"}, "we're": {"w": "we're", "ph": "wɪr", "defs": ["abbr. 我们是（we are）"], "forms": [], "ex": [["We're distantly related.", "我们是远亲。"], ["We're blissfully happy.", "我们非常幸福快乐。"]], "lv": null}, "side": {"w": "side", "ph": "saɪd", "defs": ["n. 一旁，侧边；（相对中间而言的）边，侧；侧面；方面，情况；立场，意见；一方，一派；边缘；体侧，肋部；身旁，身边；（平面图形的）边；一面；内壁，内面；（立方体的）面；斜面，坡面；一面纸的文字；自负，傲慢；运动队，球队；母系，父系，血统；配菜；一扇（肉）；电视频道；（一对东西中的）一个，一只；（球的）侧旋", "adj. 旁边的，侧面的；次要的，附带的；主菜外附加的", "v. 支持，站在……一边；给......铺外墙板；给......装上侧面，形成......的侧面", "【名】 （Side）（英）赛德（人名）"], "forms": ["复数 sides", "第三人称单数 sides", "现在分词 siding", "过去式 sided", "过去分词 sided"], "ex": [["It measures 20 yards from side to side.", "从这边到那边的距离为20码。"], ["The ship rolled from side to side.", "船左右摇晃。"]], "lv": "中考"}, "people": {"w": "people", "ph": "ˈpiːp(ə)l", "defs": ["n. 人，人类；人们，大家（the people）；平民，老百姓（the people）；民族，种族（peoples）；（具有共同品质、兴趣等的）人员，团体；与某人有联系的人们（one's people）；各位，诸位；（审判中的）公诉人（the People）", "v. 居住在，定居于；充满，充斥着（某种类型的人）"], "forms": ["复数 people或peoples", "第三人称单数 peoples", "现在分词 peopling", "过去式 peopled", "过去分词 peopled"], "ex": [["People were talking animatedly.", "人们热烈地交谈着。"], ["She tends to annoy people.", "她的举止往往惹人烦。"]], "lv": "中考"}, "get": {"w": "get", "ph": "ɡet", "defs": ["v. 收到，接到；获得，得到；挣得，赚得；去取，去带来；买；得（病），患（病）；遭受……之苦；变成，变得；形成（想法、感觉）；促使，使得；使开始，使进展；得以做，有机会做；到达；达到（某一点或某一阶段）；移动，去；理解，明白；有，经历；做（饭）；搭乘，乘坐；接（电话），应（门铃）；与……通电话；捕获，抓获；袭击，打伤，杀死；使恼火，使难过；使困惑，难住；接收（电视广播信号）；受到（惩罚）；注意到", "n. （说话人）讨厌（或鄙夷）的人；（动物的）后代"], "forms": [], "ex": [["Somebody get a doctor!", "谁去叫个医生来吧！"], ["Do you get carsick?", "你晕车吗？"]], "lv": "中考"}, "jobs": {"w": "jobs", "ph": "dʒɑːbz", "defs": ["n. 工作（job 的复数形式）"], "forms": [], "ex": [["Thousands have lost their jobs.", "数千人都丢了工作。"], ["In those days jobs were plentiful.", "那时期工作岗位多得很。"]], "lv": "中考"}, "major": {"w": "major", "ph": "ˈmeɪdʒər", "defs": ["adj. 重大的，主要的；严重的；大调的，大音阶的； （公立学校中置于学生姓氏后，表示两兄弟中）大的，年长的；主修的；大（项）的", "n. 主修科目，专业；陆军少校，（美国）空军少校；（某专业的）主修学生；职业棒球大联盟；大型公司，重要企业；成年人，已达到法定年龄者；（军乐队中主管某一乐器部的）乐器长；大调，大音程； 大项，大前提；主要世界性组织（或公司、比赛）", "v. （在美国大学）主修，专攻", "【名】  (Major) （英）梅杰，（西）马霍尔，（法）马若尔，（捷、德、塞、瑞典）马约尔（人名）"], "forms": ["复数 majors", "第三人称单数 majors", "现在分词 majoring", "过去式 majored", "过去分词 majored"], "ex": [["Rotterdam is a major port.", "鹿特丹是一个重要的港口城市。"], ["Tokyo is a major financial centre.", "东京是主要的金融中心。"]], "lv": "中考"}, "job": {"w": "job", "ph": "dʒɑːb", "defs": ["n. 工作，职业；零工，任务；职责，责任；罪行，（尤指）盗窃； 东西，物件；费力的事；幸运的事；刺，捅；东西，物件", "v. 刺，捅；（尤指经纪人小规模操作）买卖股票；欺骗，出卖；假公济私，营私舞弊", "【名】 （Job）（英）乔布，（法、葡）若布，(?-1605)约伯俄罗斯正教会莫斯科牧首，（德、塞、捷、荷、意）约布（人名)"], "forms": ["复数 jobs", "第三人称单数 jobs", "现在分词 jobbing", "过去式 jobbed", "过去分词 jobbed"], "ex": [["Her job is multifaceted.", "她的工作涉及许多方面。"], ["She likes her job.", "她爱她的工作。"]], "lv": "中考"}, "market": {"w": "market", "ph": "ˈmɑːrkɪt", "defs": ["n. 集市，市场；交易，交易量；行销地区，购买人群；市场机制；股市；市面，市况", "v. 推销，促销；出售；做买卖", "adj. 市场的，由市场决定的", "【名】 （Market）（塞）马尔凯特 （人名）"], "forms": ["复数 markets", "第三人称单数 markets", "现在分词 marketing", "过去式 marketed", "过去分词 marketed"], "ex": [["A 50% market share is achievable.", "百分之五十的市场占有率是可实现的。"], ["The market collapsed last October.", "股票市场去年10月崩盘了。"]], "lv": "中考"}, "like": {"w": "like", "ph": "laɪk", "defs": ["prep. 像，如同；符合……的方式；（指某人常做的事）符合……的特点，像……才会；（用于询问）……怎么样；例如，好比；（用于否定式短语中）比得上；大约，左右", "v. 喜欢，喜爱；希望，想要；（用于请求）想要，希望得到；喜欢（做某事、习惯某事）；（用于询问）你觉得……怎么样；对……反感，讨厌；喜好（某种环境）", "conj. 像……一样，如同；好像，似乎", "n. 喜好，爱好（常复数）；类似或同类的人或物", "adj. 类似的，相似的；（画像，图像）逼真的，像的", "adv. （非正式口语，思考说下句话、解释或举例时用）大概，可能；（非正式口语）我说，他说，她说；（非正式口语，代替as）和…一样，像；（非正式口语，代替as）和……一样，像", "【名】 （Like）（美、俄、印、英、巴）莉凯（人名）"], "forms": ["复数 likes", "第三人称单数 likes", "现在分词 liking", "过去式 liked", "过去分词 liked"], "ex": [["It tastes like chocolate.", "它吃起来像巧克力。"], ["I'd like an explanation.", "我想要一个解释。"]], "lv": "中考"}, "you're": {"w": "you're", "ph": "jʊr; jər", "defs": ["abbr. 你是，你们是（you are 的缩略形式）", "int. 不客气，不用谢（回应感谢的固定用语 you're welcome）"], "forms": [], "ex": [["You're talking nonsense !", "你在胡说八道！"], ["You're being irrational.", "你不可理喻。"]], "lv": null}, "go": {"w": "go", "ph": "ɡoʊ", "defs": ["v. 去，走；（尤指与某人）去（某处或出席某项活动）；可能要，打算做；移动，行走；在移动中做；做某个动作；离开；（为某目的）去（某处）；去做（某事）；被发送，被传递；参加（电视或电台节目）；通向，延伸到；上升；放在（通常的位置上）；放得进，适合；相配，协调；除尽，除；进行，进展；被接受，被允许；开始做（某事），进入（某种状态）；变为，变得（尤指朝坏的方面）；处于（尤指令人不快的状况）；（故事、歌词等）内容是；发出（某种声音）；发出信号（或警告）；说；开始（活动）；走开，滚开；参与（表示对所提到行为不赞成）；运转，工作；停止正常运转；消失，不见；得辞掉，被扔掉；（官能）衰退，下降；死亡；用掉，花掉；卖掉，归于；出价购买；促成，显示；流逝，消逝；继续，持续；上厕所；（某人的话）算数；（决定、判决等）对…...不利；取得（某成绩、比分等）", "n. （游戏或活动中）轮到的机会；尝试；精力，活力；某事顺利进行；围棋", "adj. 运行正常的"], "forms": ["复数 goes", "第三人称单数 goes", "现在分词 going", "过去式 went", "过去分词 gone或been"], "ex": [["\"Go! Please go.\"—\"You must be joking!\"", "“走吧！请走吧。”—“你一定是在开玩笑！”"], ["Very well, if you want to go, go you shall.", "很好，如果你想走的话，你可以走了。"]], "lv": "中考"}, "turn": {"w": "turn", "ph": "tɜːrn", "defs": ["v. 旋转，转动；转身，扭转（身体部位）；翻转；旋动，拧动；翻动（书页）；转向，拐（弯）；（路或河流）转弯；对准；（潮）涨落；（使）松开，释放；表演，做；（使）扭转局势；（使）变成，成为；转移（思考、处理、观察等的对象）；求助于，求教于；达到（一定年龄或时间）；（使）反胃，（使）恶心；车削；获得（利益）；扭伤（脚踝）；造（句），组（词）；（印刷）倒排，倒空；包抄（敌军）", "n. 转动，旋转；转向；（道路的）转弯处；轮到的机会；（情况的）变化，转变；交替时刻；短小节目；短小节目表演者；散步，转一圈；（疾病的）一阵发作，不适；（影响他人的）举止，行为；吓唬，惊吓；（股票等的）买卖差价；（板球）（球）弹地转向；（一卷绳子等的）一圈；涨潮或落潮；（乐）回音", "【名】 （Turn）（德、匈）图恩（人名）"], "forms": ["复数 turns", "第三人称单数 turns", "现在分词 turning", "过去式 turned", "过去分词 turned"], "ex": [["He decided to turn professional.", "他决定转为职业人员。"], ["Police attempted to turn back.", "警察试图往回走。"]], "lv": "中考"}, "work": {"w": "work", "ph": "wɜːrk", "defs": ["n. 工作，职业；劳动，活计；职责，工作内容；作品，著作；工作成果，作为；工作地点，工作时间；工作所需的材料（或档案等）；（机器的）活动部件（the works）；所有东西，全套物品（the works）；土木工程，建筑（works）；工厂（works）；善行，德行（works）；防御工事；（物理学）功；整形手术", "v. 工作，干活儿；从事体力（或脑力）劳动；从事……工作，在……工作；努力取得，力争；运转，运行；开动，操作（机器、装置等）；奏效，成功；产生……作用；（使）变成，逐步移动；（使）（身体某部位）抽动；（用某种材料）画画，创作；使成形，加工；博得，赢得（众人的支持或欢心）；计算，算出；思考，动脑筋；以（某种假定或思想）为基础（或前提）；安排；耕种；开采（矿）", "adj. 工作的，与工作有关的；适合工作时穿戴的；用于工作的", "【名】 （Work）（英、埃塞、丹、冰、美）沃克（人名）"], "forms": ["复数 works", "第三人称单数 works", "现在分词 working", "过去式 worked或wrought", "过去分词 worked或wrought"], "ex": [["They work terrifically fast.", "他们工作极快。"], ["Work is proceeding slowly.", "工作进展缓慢。"]], "lv": "中考"}, "time": {"w": "time", "ph": "taɪm", "defs": ["n. （以分钟、小时、天等计量的）时间；（钟表上的）时刻；（世界各地不同的）计时体系；（某事发生或应该发生的）时候；一段时间，某段日子；规定时间，可用时间；时代，时期；时光，岁月；生命（期），期限；次，回；倍（times）；完成（竞赛等）的时间；（棒球，美橄）暂停；拍子，节奏；（用于报刊名）时报（the Times）；（酒吧）打烊时间；刑期；服役期；计时工资率；分娩时间；学徒期", "v. 为……安排时间；把握（击球、射门等）的时机；为……计时，测定……所需的时间", "conj. 乘以（times）", "adj. 定时的，定期的，分期的", "【名】 （Time）（俄）季梅，（罗）蒂梅，（英）泰姆（人名）"], "forms": ["复数 times", "第三人称单数 times", "现在分词 timing", "过去式 timed", "过去分词 timed"], "ex": [["Time is like a wild donkey. Once it starts running, it never stops.", "时间像一头野驴呀，跑起来就不停。"], ["This time they've messed up big time!", "这一次他们把事情搞得糟透了！"]], "lv": "中考"}, "two": {"w": "two", "ph": "tuː", "defs": ["num. 二；两个", "adj. 两个的", "n. 两个；数字二；两个一组"], "forms": ["复数 twos"], "ex": [["Two prisoners have escaped.", "两名犯人逃走了。"], ["The two meanings conflated.", "这两种意思合并在了一起。"]], "lv": "中考"}, "kids": {"w": "kids", "ph": "kɪdz", "defs": ["n. （kid 的复数）小孩，孩子；年轻人；小山羊；小山羊皮革；（尤指水手食堂盛格罗酒或配额食物用的）小木桶", "v. （kid 的第三人称单数）开玩笑，拿……开玩笑，（善意地）取笑；（山羊）产羔；欺骗，常与 oneself 连用时表示“欺骗自己”"], "forms": [], "ex": [["They let their kids run riot.", "他们听任自己的孩子撒野。"], ["Will you kids just behave!", "孩子们，规矩点！"]], "lv": "中考"}, "able": {"w": "able", "ph": "ˈeɪb(ə)l", "defs": ["adj. 能够，有能力的；聪明能干的，精通（某事）的", "【名】 （Able）（英）埃布尔，（伊朗）阿布勒（人名）"], "forms": ["比较级 abler或more able", "最高级 ablest或most able"], "ex": [["She was barely able to stand.", "她勉强能站立。"], ["You'll be able to read in peace.", "你将可以安静地看书。"]], "lv": "中考"}, "end": {"w": "end", "ph": "end", "defs": ["n. 最后部分，末尾；结束，结局；端点；目的；剩余物，残余；过世；部分，方面；半边球场；城区；边锋", "v. 结束，终止", "【名】 （End）（英、德）恩德（人名）"], "forms": [], "ex": [["They live in the end house.", "他们住在最后的那座房子。"], ["The summer came to an end.", "夏天结束了。"]], "lv": "中考"}, "do": {"w": "do", "ph": "duː; də", "defs": ["v. 做，干，办（某事）；行动，表现；顺利进行，进展；从事（工作）；执行（任务）；学习，研究；解答，解决，算出；制作，做出；演出，编排（戏剧等）；仿效，模仿；完成，做好；处理；供给，提供；适合，足够；参观，游览，旅行；走过，行过；以……速度行进；达到（一定销售额）；度过（一段时间）；服（刑）；导致，引起；煮制；整理，梳（发）；护理；欺骗；惩罚；（从某地方）盗窃；（非正式）吸（毒）；（非正式）性交；（非正式）痛打，杀死；生长", "aux. 与动词连用构成否定句和疑问句；用于构成疑问尾句；用于避免重复某一动词；用于强调主要动词；用于祈使句中表示礼貌；用于肯定或否定回答；用在倒装句中", "n. 聚会，社交活动；（主英国、新西兰口语）宴会；（口语）事件；（主英国口语）诈骗；要求，规定，必须做到的事情（口语，常用复数 dos）；（音乐）唱名，音阶的第一音（如 C 大调音阶中的 do）；（非正式）（女子）发型；（Do）多（人名 Dorothea 和 Dorothy 的昵称）"], "forms": ["复数 dos或do's", "第三人称单数 does", "现在分词 doing", "过去式 did", "过去分词 done"], "ex": [["What do you usually do in the evening ?", "你晚上通常干什么？"], ["What do you propose to do now?", "现在你打算做什么？"]], "lv": "中考"}, "mean": {"w": "mean", "ph": "miːn", "defs": ["v. 意味着；表示……的意思，作……的解释；打算，意欲；使专门用于；导致，结果是；十分熟识；当真，说到做到；对某人重要", "adj. 吝啬的，小气的；不善良的，刻薄的；要发怒的；熟练的，出色的；平均的；简陋的，破旧的；微薄的；出身卑贱的，社会地位低下的；中庸的，中等的；凶狠的，好斗的", "n. 中庸，折衷；平均数，中数；中间点", "【名】 （Mean）（柬）棉（人名）"], "forms": ["复数 means", "第三人称单数 means", "现在分词 meaning", "过去式 meant", "过去分词 meant", "比较级 meaner或more mean", "最高级 meanest或most mean"], "ex": [["What does this sentence mean?", "这个句子是什么意思？"], ["You can't possibly mean that!", "你绝不会是那个意思吧！"]], "lv": "中考"}, "make": {"w": "make", "ph": "meɪk", "defs": ["v. 制造；制定，拟定；使变得，使处于；造成，引起；整理（床铺）；做，作出；强迫；挑选，任命；成为，适合；合计，等于；计算，估算；安排，组织；表现，描绘；挣钱，赚钱；（体育比赛）得分；（尽力）赶往，到达；排成 （某图案）；使形成，留下（印记、洞等）；使成功，使圆满；在……占一席之地；似乎要做；朝（特定方向）走去；求欢；（桥牌等）赢一墩牌；（潮）涨，（潮）退", "n. （机器、设备等的）品牌，型号；结构，构造；通电，接电", "【名】 （Make）（塞、南非）马克（人名）"], "forms": ["复数 makes", "第三人称单数 makes", "现在分词 making", "过去式 made", "过去分词 made"], "ex": [["Four quarters make a whole.", "四个四分之一构成一个整体。"], ["Photos make useful teaching aids.", "照片可以成为有用的教具。"]], "lv": "中考"}, "feel": {"w": "feel", "ph": "fiːl", "defs": ["v. 感受到，体会到；觉得，相信；使人感觉……；察觉到，意识到；触摸；受到；摸索；有知觉，能感知……", "n. 感觉，气氛；触觉，手感；触摸；感知，理解；熟练使用；特性，特质"], "forms": ["复数 feels", "第三人称单数 feels", "现在分词 feeling", "过去式 felt", "过去分词 felt"], "ex": [["'I feel...' There she stopped.", "“我觉得…”她说到那儿停了下来。"], ["I feel quite exhausted.", "我感到筋疲力尽。"]], "lv": "中考"}, "decade": {"w": "decade", "ph": "ˈdekeɪd", "defs": ["n. 十年，十年期；十进"], "forms": ["复数 decades"], "ex": [["Women have become more assertive in the past decade.", "妇女在过去十年已变得更坚定自信。"], ["At least one supernova occurs per decade in our galaxy.", "每十年至少有一颗超新星在我们的银河系中出现。"]], "lv": "高考"}, "year": {"w": "year", "ph": "jɪr", "defs": ["n. 年，日历年；年，一年时间；与某事相关的一年，年度；学年；年级，某年级的学生；年龄，年纪，岁；很久，好长时间；年代，时代"], "forms": ["复数 years"], "ex": [["They separated last year.", "他们于去年分居了。"], ["Spending has increased year on year.", "与去年同期比较，开销增加了。"]], "lv": "中考"}, "first": {"w": "first", "ph": "fɜːrst", "defs": ["det. 第一位的，最先的；首（次）的；（某一时间或某事后的）紧接着来到的；（一列中）最前面的；最重要的；（用于工作或职位的头衔中）最高的；最迫切的，最合适的", "adv. 第一，最初；起初；第一次；（列举时用）首先；（强调不愿意）宁可；以身体的某一部位（或某人）在先（或为首）", "n. 第一个人（或事物)；前所未有的事情；（汽车、自行车等的）最低档；（英国大学学位）最高成绩；（棒球）第一垒；一等品", "pron. 第一次", "【名】 （First）（美）菲尔斯特（人名）"], "forms": ["复数 firsts"], "ex": [["His first marriage broke up.", "他的第一次婚姻破裂了。"], ["She won the first hole.", "她在第一洞时领先。"]], "lv": "中考"}, "thing": {"w": "thing", "ph": "θɪŋ", "defs": ["n. 东西，物；（无生命的）物体，物件；个人物品，衣物（things）；器具，用品（things）；情形，事件；行为，活动；想法，观点；情况，形势（things）；……之类的东西，特定的事物；需要的东西，适当的东西；事实本身；（生活的）方面；目标，目的；生物，有生命的东西；家伙，东西（指人或动物，常带感情色彩）；（用于强调）任何东西；（某人喜欢或擅长的）事情；（对某事物或某人的）喜欢，憎恶；烂东西，破烂玩意儿"], "forms": ["复数 things"], "ex": [["Mario said the very same thing.", "马里奥说的完全是同一件事。"], ["Then a strange thing happened.", "接着一件怪事发生了。"]], "lv": "中考"}, "deal": {"w": "deal", "ph": "diːl", "defs": ["n. 大量；交易；坏运气，不公平的对待；发牌；冷衫木；优惠的价格，划算的价格；牌戏的一局；一手牌", "v. 应对（难缠的人，困难局面）（deal with）；（以某种方式）对付，对待（deal with）；论及，讨论（deal with）；买卖，交易；给予；贩卖（毒品、艺术品等）；与……有关；发牌", "【名】 （Deal）（美）迪尔（人名）"], "forms": ["复数 deals", "第三人称单数 deals", "现在分词 dealing", "过去式 dealt", "过去分词 dealt"], "ex": [["Whose turn is it to deal?", "该谁发牌了？"], ["They shook on the deal.", "他们达成了协议，相互握手祝贺。"]], "lv": "中考"}, "future": {"w": "future", "ph": "ˈfjuːtʃər", "defs": ["n. 未来，将来；前途，前景；期货；（动词的）将来时态", "adj. 将来的，未来的；（动词）将来时态的"], "forms": ["复数 futures"], "ex": [["The future is not without hope.", "未来并非没有希望。"], ["We need to plan for the future.", "我们需要为将来作好打算。"]], "lv": "中考"}, "pessimistic": {"w": "pessimistic", "ph": "ˌpesɪˈmɪstɪk", "defs": ["adj. 悲观的，悲观主义的"], "forms": ["比较级 more pessimistic", "最高级 most pessimistic"], "ex": [["I think you're being far too pessimistic.", "我觉得你过于悲观了。"], ["Not everyone is so pessimistic about the future.", "并非每个人都对未来如此悲观。"]], "lv": "高考"}, "negative": {"w": "negative", "ph": "ˈneɡətɪv", "defs": ["adj. 有害的，负面的；悲观的，消极的；否定的，拒绝的；否定式的；（结果）阴性的；负极的，阴极的；负的，小于零的；亏损的；负像的，底片的；（天文）负的；（立法）自动生效的；Rh阴性的", "n. 底片，负片；否定词，否定句；坏处，害处；阴性结果；（逻）（对命题的）否定；负电；负数", "v. 拒绝，否定；推翻，证伪；消除，抵消"], "forms": ["复数 negatives", "第三人称单数 negatives", "现在分词 negativing", "过去式 negatived", "过去分词 negatived", "比较级 more negative", "最高级 most negative"], "ex": [["They received a negative reply.", "他们得到一个否定的答复。"], ["His response was negative.", "他的回答是否定的。"]], "lv": "中考"}, "i'd": {"w": "i'd", "ph": "", "defs": ["abbr. 我愿意（等于 I would）"], "forms": [], "ex": [["I'd welcome any suggestions.", "任何建议我都会愉快地接受。"], ["I'd heard they're divorcing.", "我听说他们要离婚了。"]], "lv": null}, "serious": {"w": "serious", "ph": "ˈsɪriəs", "defs": ["adj. 严重的，危急的；认真的，严肃的；重要的，须重视的；（音乐、文学等艺术）严肃的；（人）庄重的，严肃的；大量的，极多的；（恋爱中）态度认真的；极感兴趣的，热衷的；很好的，质优价高的"], "forms": [], "ex": [["You're joking. Are you serious?", "你在开玩笑吧。你是认真的吗？"], ["He's quite a serious person.", "他是一个相当严肃的人。"]], "lv": "中考"}, "situation": {"w": "situation", "ph": "ˌsɪtʃuˈeɪʃ(ə)n", "defs": ["n. 情况，形势；重要问题，突发情况；（建筑物或城镇的）地理位置，环境特点；工作，职位"], "forms": [], "ex": [["The situation is under control.", "局面得到了控制。"], ["The situation is highly dangerous.", "形势十分危急。"]], "lv": "中考"}, "crowd": {"w": "crowd", "ph": "kraʊd", "defs": ["n. 人群；一伙人；百姓，凡夫俗子；（尤指体育运动赛事的）观众，听众", "v. 聚集，群集；靠近，盯着；催促，催逼（因而把人激怒或惹恼）；挤满，塞满"], "forms": ["复数 crowds", "第三人称单数 crowds", "现在分词 crowding", "过去式 crowded", "过去分词 crowded"], "ex": [["Please don't crowd. If anyone gets hurt, I'll be heartbroken, okay?", "大家别拥挤，每个人受伤我都会很伤心的ok？"], ["An expectant crowd gathered.", "满怀期待的一群人聚在了一起。"]], "lv": "中考"}, "sold": {"w": "sold", "ph": "soʊld", "defs": ["v. 卖，销售（sell 的过去式和过去分词）", "adj. 已售出的，已卖出的（多作表语）；sold out：售罄的，脱销的，（门票等）全部售完的", "n. （Sold）人名，（瑞典）索尔德"], "forms": [], "ex": [["Wallpaper is sold in rolls.", "壁纸论卷销售。"], ["Flour is sold by the kilogram.", "面粉按公斤出售。"]], "lv": "中考"}, "dream": {"w": "dream", "ph": "driːm", "defs": ["n. 梦；梦想；恍惚，出神；梦一般美妙的人或事物", "v. 做梦，梦见；梦想，想象；做白日梦，开小差；考虑，料想；白白浪费时间，虚度光阴", "adj. 理想的，完美的"], "forms": ["复数 dreams", "第三人称单数 dreams", "现在分词 dreaming", "过去式 dreamt或dreamed", "过去分词 dreamt或dreamed"], "ex": [["He finally actualized his dream.", "他最终实现了自己的梦想。"], ["He had a dream about Claire.", "他做了一个关于克莱尔的梦。"]], "lv": "中考"}, "gonna": {"w": "gonna", "ph": "ˈgɔːnə; ˈɡənə", "defs": ["contr. 即将，将要（即 going to）"], "forms": [], "ex": [["You're gonna regret this.", "你会为此后悔的。"], ["We're gonna talk about what happens and why.", "我将要谈论发生了什么以及为什么。"]], "lv": null}, "school": {"w": "school", "ph": "skuːl", "defs": ["n. （中、小）学校；全校师生；上学时间；上学期间；专科学校；大学，大学期间；（大学的）系，学院；学派，流派；（鱼、鲸、海豚等的）群；（牛津大学的）期末考试大厅；（牛津大学的）期末考试；一伙赌徒；（轮番到酒吧请客喝酒的）酒友", "v. 教育，培养（儿童）；训练，教育；（尤指为竞赛）驯马；（鱼，海兽）成群；强迫自己（做难事）", "adj. （科萨人）受过西化教育的；（名字）源自西方的"], "forms": [], "ex": [["Which school do they attend?", "他们上的是哪一所学校？"], ["Conditions vary from school to school.", "各所学校的情况不同。"]], "lv": "中考"}, "graduate": {"w": "graduate", "ph": "ˈɡrædʒuət; ˈgrædʒuˌeɪt", "defs": ["n. 大学毕业生，学士学位获得者；毕业生", "v. 获得学位（尤指学士），大学毕业；毕业（尤指中学）；授予（某人）学位（或毕业文凭等）；（从……）进步到，升级到；按序列或规模安排；（在仪器或容器上）刻度，做标记；逐渐（或逐步）改变（某物，尤指颜色或色调）", "adj. （课程、学业）研究生的"], "forms": ["复数 graduates", "第三人称单数 graduates", "现在分词 graduating", "过去式 graduated", "过去分词 graduated"], "ex": [["After all his hard work, he now needs only two credit hours to graduate.", "通过努力学习，他现在只需再修两个学分就可以毕业了。"], ["The Voyager workload is divided among 157 scientists and scads of graduate students.", "航行者的工作量被分给157位科学家和大批研究生。"]], "lv": "高考"}, "half": {"w": "half", "ph": "hæf", "defs": ["n. 一半，二分之一；半场，半局；（足球、橄榄球等的）中场队员；半品脱；儿童半票；半学年，一学期；（高尔夫）一穴击球得分与对手相等", "pron. 一半；（时间）……点半（=half past）；大量，许多", "det. 一半", "adj. 一半的；不完整的，部分的", "adv. 一半地，接近一半地；部分地，不完全地；极其，非常（强调情况很糟）；一半……血统地", "【名】 （Half）（英）哈夫，（德）哈尔夫，（阿拉伯）哈勒夫（人名）"], "forms": ["复数 halves"], "ex": [["Children travel (at) half fare.", "儿童交通费减半。"], ["I've divided the money in half.", "我把钱平均分成了两半。"]], "lv": "中考"}, "nice": {"w": "nice", "ph": "naɪs", "defs": ["adj. 美好的，令人愉快的；好心的，友好的；（天气）温暖的，宜人的；（观点、区别等）细致的，微妙的；（用于打招呼）很高兴见到你；干得好的，出色的；坏的，令人不愉快的；正派的，有教养的；挑剔的，谨慎的", "n. 尼斯（法国城市，Nice）", "【名】 （Nice）尼斯（人名）"], "forms": ["比较级 nicer", "最高级 nicest"], "ex": [["It's been nice meeting you.", "这次见到你真高兴。"], ["My new bike's nice, hey?", "我的新自行车挺好，你说呢？"]], "lv": "中考"}, "suburban": {"w": "suburban", "ph": "səˈbɜːrbən", "defs": ["adj. 郊区的，城郊的；平淡乏味的，乡气的，平庸的", "n. 郊区居民"], "forms": [], "ex": [["And there isn't good public transportation from inner city Detroit to those suburban malls.", "从底特律市中心到那些市郊的商场并没有好的公共交通。"], ["Meg is a lawyer-mom in suburban Washington, D.C.", "梅格是华盛顿郊区的一名律师妈妈。"]], "lv": "四级"}, "home": {"w": "home", "ph": "hoʊm", "defs": ["n. 家，住宅；（可买卖的）房子，寓所；家庭；养育院，收容所；适于存放……的地方；发源地，发祥地；栖息地，生息地；家乡，祖国；（组织、公司等的）本部，基地；（比赛的）主场", "adj. 家庭的，家用的；在家里做（或进行）的；本国的，国内的；在主场进行的；总部的", "adv. 回家，在家；到正确的位置；朝着球门，进入到球门里", "v. 归巢；对准（目标）；把（思想、注意力）集中于；把（动物）养作宠物", "【名】 （Home）（德、芬）霍梅，（英、尼）霍姆（人名）"], "forms": ["复数 homes", "第三人称单数 homes", "现在分词 homing", "过去式 homed", "过去分词 homed"], "ex": [["Burglars broke into their home.", "窃贼闯进了他们家。"], ["Afternoons he works at home.", "每天下午他在家里工作。"]], "lv": "中考"}, "afford": {"w": "afford", "ph": "əˈfɔːrd", "defs": ["v. 买得起；有（时间）做某事；承担得起；提供，给予", "n. （Afford）（英、美）阿福德（人名）"], "forms": ["第三人称单数 affords", "现在分词 affording", "过去式 afforded", "过去分词 afforded"], "ex": [["I can afford it, but only just.", "这东西我刚好买得起。"], ["He could barely afford the fare.", "他几乎付不起车费。"]], "lv": "中考"}, "benz": {"w": "benz", "ph": "benz", "defs": ["n. 奔驰，梅赛德斯-奔驰（世界著名的德国汽车品牌及其生产的汽车）；本茨（姓氏）"], "forms": [], "ex": [["Do you need your Mercedes-Benz?", "你需要你的梅赛德斯-奔驰吗？"], ["Iris Rossner has seen eastern German customers weep for joy when they drive away in shiny, new Mercedes-Benz sedans.", "罗斯纳曾见过东德的客户，当他们开着闪闪发亮的新款梅赛德斯-奔驰轿车离开时，喜笑颜开。"]], "lv": null}, "hate": {"w": "hate", "ph": "heɪt", "defs": ["v. 厌恶，不喜欢；仇恨，憎恨；（表示不愿说某事，或客气地请求）不愿，不想", "n. 憎恶，憎恨；所憎恶的人（或事物）", "【名】 （Hate）（法）阿特（人名）"], "forms": ["复数 hates", "第三人称单数 hates", "现在分词 hating", "过去式 hated", "过去分词 hated"], "ex": [["The obverse of love is hate.", "爱的反面是恨。"], ["I hate being photographed.", "我讨厌被拍照。"]], "lv": "中考"}, "tri": {"w": "tri", "ph": "traɪ", "defs": ["abbr. 产业研究所（Topology Research Institute）；技术报告说明书（Technical Report Instruction）"], "forms": [], "ex": [["Combined with the lab experiment, the numerical model is applied to wave-induced nearshore currents on a fixed tri-cuspate beach.", "在此基础上进一步结合实验模型，这个数字模型被用于分析正弦地形上的近岸流在波浪作用下的分布情况。"]], "lv": null}, "album": {"w": "album", "ph": "ˈælbəm", "defs": ["n. 唱片，专辑；相册，影集，集邮册"], "forms": ["复数 albums"], "ex": [["Their new album is dynamite.", "他们的新唱片引起轰动。"], ["I stuck the photos into an album.", "我把照片贴到相册上。"]], "lv": "中考"}, "capsule": {"w": "capsule", "ph": "ˈkæps(ə)l", "defs": ["n. 胶囊；小容器；太空舱，航天舱；蒴果，荚膜", "adj. 简短的；压缩的", "v. 压缩；简述"], "forms": ["复数 capsules", "第三人称单数 capsules", "现在分词 capsuling", "过去式 capsuled", "过去分词 capsuled"], "ex": [["You are asked to swallow a capsule containing vitamin B.", "你被要求吞下一颗含维生素B的胶囊。"], ["A Russian space capsule is currently orbiting the Earth.", "一个俄罗斯太空舱目前正环绕地球飞行。"]], "lv": "高考"}, "hear": {"w": "hear", "ph": "hɪr", "defs": ["v. 听到，听见；聆听，倾听；听说，得知；审理，听审；脑际响起；听明白"], "forms": ["第三人称单数 hears", "现在分词 hearing", "过去式 heard", "过去分词 heard"], "ex": [["People flocked to hear him speak.", "人们成群结队地去听他演讲。"], ["I can hear someone calling.", "我听见有人在呼叫。"]], "lv": "中考"}, "drug": {"w": "drug", "ph": "drʌɡ", "defs": ["n. 毒品；药物；运动禁药；成瘾之事", "v. 使服麻醉药；（在食物或饮料中）投放麻醉药；吸毒", "【名】 （Drug）（罗）德鲁格（人名）"], "forms": ["复数 drugs", "第三人称单数 drugs", "现在分词 drugging", "过去式 drugged", "过去分词 drugged"], "ex": [["The new drug was ineffective.", "新药不起作用。"], ["Drug stores upped sales by 63 percent.", "药店的销售额增加了63%。"]], "lv": "中考"}, "the": {"w": "the", "ph": "", "defs": ["art. 这/那（定冠词，表特指）"], "forms": [], "ex": [], "lv": null}, "a": {"w": "a", "ph": "", "defs": ["art. 一个（不定冠词）"], "forms": [], "ex": [], "lv": null}, "an": {"w": "an", "ph": "", "defs": ["art. 一个（用于元音前）"], "forms": [], "ex": [], "lv": null}, "this": {"w": "this", "ph": "", "defs": ["pron./adj. 这个"], "forms": [], "ex": [], "lv": null}, "that": {"w": "that", "ph": "", "defs": ["pron./conj. 那个；（引导从句）"], "forms": [], "ex": [], "lv": null}, "and": {"w": "and", "ph": "", "defs": ["conj. 和；并且"], "forms": [], "ex": [], "lv": null}, "if": {"w": "if", "ph": "", "defs": ["conj. 如果"], "forms": [], "ex": [], "lv": null}, "then": {"w": "then", "ph": "", "defs": ["adv. 然后；那么"], "forms": [], "ex": [], "lv": null}, "than": {"w": "than", "ph": "", "defs": ["conj. 比"], "forms": [], "ex": [], "lv": null}, "in": {"w": "in", "ph": "", "defs": ["prep. 在…里；在…方面"], "forms": [], "ex": [], "lv": null}, "on": {"w": "on", "ph": "", "defs": ["prep. 在…上；关于"], "forms": [], "ex": [], "lv": null}, "at": {"w": "at", "ph": "", "defs": ["prep. 在（某点/时刻）"], "forms": [], "ex": [], "lv": null}, "by": {"w": "by", "ph": "", "defs": ["prep. 被；通过；到…为止"], "forms": [], "ex": [], "lv": null}, "for": {"w": "for", "ph": "", "defs": ["prep. 为了；对于"], "forms": [], "ex": [], "lv": null}, "to": {"w": "to", "ph": "", "defs": ["prep. 到；向"], "forms": [], "ex": [], "lv": null}, "about": {"w": "about", "ph": "", "defs": ["prep./adv. 关于；大约"], "forms": [], "ex": [], "lv": null}, "up": {"w": "up", "ph": "", "defs": ["adv. 向上"], "forms": [], "ex": [], "lv": null}, "not": {"w": "not", "ph": "", "defs": ["adv. 不"], "forms": [], "ex": [], "lv": null}, "no": {"w": "no", "ph": "", "defs": ["adv./adj. 不；没有"], "forms": [], "ex": [], "lv": null}, "just": {"w": "just", "ph": "", "defs": ["adv. 只是；刚刚"], "forms": [], "ex": [], "lv": null}, "only": {"w": "only", "ph": "", "defs": ["adv. 只；仅仅"], "forms": [], "ex": [], "lv": null}, "there": {"w": "there", "ph": "", "defs": ["adv. 那里；（there be 表存在）"], "forms": [], "ex": [], "lv": null}, "what": {"w": "what", "ph": "", "defs": ["pron. 什么"], "forms": [], "ex": [], "lv": null}, "why": {"w": "why", "ph": "", "defs": ["adv. 为什么"], "forms": [], "ex": [], "lv": null}, "all": {"w": "all", "ph": "", "defs": ["adj./pron. 全部"], "forms": [], "ex": [], "lv": null}, "would": {"w": "would", "ph": "", "defs": ["v. 会（will 过去式/委婉）"], "forms": [], "ex": [], "lv": null}};
+const eng = {
+  youdao: u => 'https://dict.youdao.com/dictvoice?type=1&audio=' + encodeURIComponent(u),
+  google: u => 'https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=' + encodeURIComponent(u)
+};
+let voices = [], stopFlag = false, audioEl = null, curRow = -1;
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+/* ---------- 句子列表 ---------- */
+let h = '', last = '';
+DATA.forEach((d, i) => {
+  if (d.part !== last) { last = d.part; h += '<div class="part-h">Part ' + d.part + '</div>'; }
+  h += '<div class="row" data-i="' + i + '"><div class="en"><span class="num">' + (i+1) + '</span>'
+     + esc(d.en) + '</div>' + (d.cn ? '<div class="cn">' + esc(d.cn) + '</div>' : '') + '</div>';
+});
+$('list').innerHTML = h;
+
+/* ---------- 语音 ---------- */
+function loadVoices(){
+  const sel = $('voice');
+  voices = speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang));
+  sel.innerHTML = '<option value="">默认语音</option>'
+    + voices.map((v,i) => '<option value="' + i + '">' + esc(v.name) + '</option>').join('');
+  if (!voices.length){
+    $('engine').value = 'youdao';
+    $('status').innerHTML = '本机没有检测到英文语音包，已自动切到<b>在线·有道</b>（需要联网）。';
+  } else {
+    $('status').textContent = '检测到 ' + voices.length + ' 个英文语音，使用本地离线朗读。';
+  }
+}
+speechSynthesis.onvoiceschanged = loadVoices; loadVoices();
+
+function speakLocal(text, done){
+  const u = new SpeechSynthesisUtterance(text);
+  const idx = $('voice').value;
+  if (idx !== '' && voices[idx]) u.voice = voices[idx];
+  u.lang = 'en-US'; u.rate = parseFloat($('rate').value);
+  u.onend = done; u.onerror = done;
+  speechSynthesis.speak(u);
+}
+function splitChunks(text, max){
+  const first = []; let cur = '';
+  text.split(/(?<=[.;:!?])\s+|(?<=,)\s+/).forEach(seg => {
+    if ((cur + ' ' + seg).trim().length > max && cur){ first.push(cur.trim()); cur = seg; }
+    else cur = (cur ? cur + ' ' : '') + seg;
+  });
+  if (cur.trim()) first.push(cur.trim());
+  const res = [];
+  first.forEach(c => {
+    if (c.length <= max){ res.push(c); return; }
+    let buf = '';
+    c.split(/\s+/).forEach(w => {
+      if ((buf + ' ' + w).length > max && buf){ res.push(buf); buf = w; } else buf = buf ? buf + ' ' + w : w;
+    });
+    if (buf) res.push(buf);
+  });
+  return res;
+}
+function speakOnline(text, done){
+  const mk = eng[$('engine').value] || eng.youdao;
+  const arr = splitChunks(text, 170);
+  let k = 0, fail = 0;
+  (function next(){
+    if (stopFlag || k >= arr.length) return done();
+    if (audioEl) audioEl.pause();
+    audioEl = new Audio(mk(arr[k])); k++;
+    audioEl.onended = next;
+    audioEl.onerror = () => { if (++fail >= 2) return done(); next(); };
+    audioEl.play().catch(() => next());
+  })();
+}
+function speak(text, done){
+  if ($('engine').value === 'local' && voices.length) speakLocal(text, done);
+  else speakOnline(text, done);
+}
+
+/* ---------- 生词本 ---------- */
+const VKEY = 'yuedu_vocab';
+let vocab = [];
+try { vocab = JSON.parse(localStorage.getItem(VKEY) || '[]'); } catch(e){ vocab = []; }
+function renderVocab(){
+  $('vocabH').textContent = '⭐ 生词本（' + vocab.length + '）';
+  const ul = $('vocab');
+  ul.innerHTML = '';
+  vocab.forEach((w, i) => {
+    const li = document.createElement('li');
+    const a = document.createElement('span');
+    a.className = 'vw'; a.textContent = w;
+    a.onclick = () => showWord(w, w);
+    const b = document.createElement('span');
+    b.className = 'del'; b.textContent = '×';
+    b.onclick = () => { vocab.splice(i, 1); saveVocab(); };
+    li.appendChild(a); li.appendChild(b); ul.appendChild(li);
+  });
+}
+function saveVocab(){
+  localStorage.setItem(VKEY, JSON.stringify(vocab));
+  renderVocab();
+}
+renderVocab();
+
+/* ---------- 词面板 ---------- */
+function renderSentence(i){
+  curRow = i;
+  document.querySelectorAll('.row.active').forEach(r => r.classList.remove('active'));
+  const row = document.querySelector('.row[data-i="' + i + '"]');
+  if (row) row.classList.add('active');
+  const d = DATA[i];
+  $('sent').innerHTML = '<b>句 ' + (i+1) + '</b>（Part ' + d.part + '）· ' + esc(d.en);
+  const box = $('chips');
+  box.innerHTML = '';
+  (d.tok || []).forEach(p => {
+    const t = p[0], k = p[1];
+    if (/^\s+$/.test(t)){
+      const sp = document.createElement('span'); sp.innerHTML = '&nbsp;'; box.appendChild(sp); return;
+    }
+    if (!/^[A-Za-z]/.test(t)){
+      const sp = document.createElement('span'); sp.className = 'punct'; sp.textContent = t; box.appendChild(sp); return;
+    }
+    const el = document.createElement('span');
+    el.className = 'chip' + (k && BANK[k] ? ' dict' : '');
+    el.textContent = t;
+    el.onclick = () => {
+      box.querySelectorAll('.chip.sel').forEach(x => x.classList.remove('sel'));
+      el.classList.add('sel');
+      showWord(k, t);
+    };
+    box.appendChild(el);
+  });
+  $('card').innerHTML = '<div class="empty">点上面任意单词查看释义。<br>带绿色底线的词，词库已收录。</div>';
+}
+
+function showWord(key, surface){
+  const e = BANK[key];
+  if (!e){
+    $('card').innerHTML = '<div class="hd"><span class="word">' + esc(surface || key) + '</span></div>'
+      + '<div class="empty">词库暂未收录这个词。</div>';
+    return;
+  }
+  let html = '<div class="hd"><span class="word">' + esc(e.w) + '</span>'
+           + (e.ph ? '<span class="phn">/' + esc(e.ph) + '/</span>' : '')
+           + (e.lv ? '<span class="badge lv">' + esc(e.lv) + '</span>' : '')
+           + '<button id="speakW">🔊 朗读</button><button id="starW">⭐</button></div>';
+  if (e.defs && e.defs.length)
+    html += '<div class="sub">释义</div><ul class="defs">' + e.defs.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+  if (e.forms && e.forms.length)
+    html += '<div class="forms">词形变化：' + esc(e.forms.join(' ｜ ')) + '</div>';
+  if (e.ex && e.ex.length){
+    html += '<div class="sub">真实例句（点句朗读）</div>';
+    html += e.ex.map(p => '<div class="ex" data-s="' + esc(p[0]) + '">' + esc(p[0])
+             + '<div class="cnx">' + esc(p[1]) + '</div></div>').join('');
+  }
+  $('card').innerHTML = html;
+  $('speakW').onclick = () => speak(e.w, () => {});
+  const sw = $('starW');
+  const sync = () => {
+    const on = vocab.indexOf(e.w) >= 0;
+    sw.textContent = on ? '★ 已收藏' : '⭐ 收藏';
+    sw.className = on ? 'on' : '';
+  };
+  sw.onclick = () => {
+    const i = vocab.indexOf(e.w);
+    if (i >= 0) vocab.splice(i, 1); else vocab.push(e.w);
+    saveVocab(); sync();
+  };
+  sync();
+  $('card').querySelectorAll('.ex').forEach(el => {
+    el.onclick = () => speak(el.dataset.s, () => {});
+  });
+}
+
+/* ---------- 播放控制 ---------- */
+function clearHL(){ document.querySelectorAll('.row.playing').forEach(r => r.classList.remove('playing')); }
+function highlight(i){
+  clearHL();
+  const el = document.querySelector('.row[data-i="' + i + '"]');
+  if (el){ el.classList.add('playing'); el.scrollIntoView({block:'center', behavior:'smooth'}); }
+}
+function cancelAll(){
+  stopFlag = true;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  if (audioEl){ audioEl.pause(); audioEl = null; }
+}
+async function playFrom(start){
+  stopFlag = false;
+  for (let i = start; i < DATA.length; i++){
+    if (stopFlag) break;
+    highlight(i); renderSentence(i);
+    await new Promise(res => speak(DATA[i].en, res));
+    if (stopFlag) break;
+    await new Promise(res => setTimeout(res, +$('gap').value));
+  }
+  clearHL();
+}
+$('list').addEventListener('click', ev => {
+  const row = ev.target.closest('.row');
+  if (!row) return;
+  cancelAll(); stopFlag = false;
+  const i = +row.dataset.i;
+  highlight(i); renderSentence(i);
+  speak(DATA[i].en, () => {});
+});
+$('playAll').onclick = () => { cancelAll(); playFrom(0); };
+$('stop').onclick = () => { cancelAll(); clearHL(); };
+$('toggleCn').onclick = function(){
+  document.body.classList.toggle('show-cn');
+  this.classList.toggle('on');
+  this.textContent = document.body.classList.contains('show-cn') ? '隐藏中文' : '显示中文';
+};
+$('rate').oninput = () => $('rateVal').textContent = $('rate').value + 'x';
+$('gap').oninput = () => $('gapVal').textContent = ($('gap').value / 1000).toFixed(1) + 's';
+$('engine').onchange = function(){
+  if (this.value === 'local' && !voices.length){
+    this.value = 'youdao';
+    $('status').textContent = '本机没有英文语音包，无法使用本地模式。';
+  } else {
+    $('status').textContent = this.value === 'local'
+      ? '已切换到本地离线朗读。' : '已切换到' + this.options[this.selectedIndex].text + '（需要联网）。';
+  }
+};
+</script>
+</body>
+</html>
