@@ -162,8 +162,11 @@ yt-dlp + cookie 刷新共享同一份 `douyin_cookies.txt`，并行会串台（d
 ```bash
 git add -A
 # 只允许 notes/ 与 shadowing/ 下的新增文件；出现其他路径就中止检查
-git diff --cached --name-only | grep -vE '^(notes|shadowing)/' && echo "⚠️ 混入了非产出文件，中止" && exit 1
+git -c core.quotepath=false diff --cached --name-only | grep -vE '^(notes/|shadowing/)' \
+  && echo "⚠️ 混入了非产出文件，中止" && exit 1
 ```
+
+> 注意必须带 `-c core.quotepath=false`：否则中文路径会被 Git 转义成 `"notes/2026-10-30-\344\270..."`，`^notes/` 匹配不上，守卫形同虚设（2026-10-30 首次写这条时踩过）。
 
 理由：`git add -A` 会把调试截图、临时 json、误建的目录一起带上去。仓库只该有两类东西 —— **当天的两份 md + 一个跟读页**，加上 `README.md` / `.gitignore` 的规则修订。
 
